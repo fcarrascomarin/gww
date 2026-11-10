@@ -1,0 +1,16 @@
+# Cachés y archivos de edición locales
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
+.env
+.env.*
+!/.env.example
+# Nunca subir registros privados ni respaldos
+privado/
+private/
+backups/
+*.secret.json
