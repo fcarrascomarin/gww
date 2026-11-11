@@ -34,3 +34,10 @@ Consulta la guía detallada en [`docs/GUIA_GITHUB_PAGES.md`](docs/GUIA_GITHUB_PA
 - Este repositorio deberá quedar bajo control institucional de Fundación Manzana Verde / GWW Chile y mantenerse con respaldo y documentación.
 
 **Paleta oficial**: `#68A5DD`, `#2484BF`, `#DB5720`, `#F2EBD5`, `#66824F` (archivo recibido «Paleta de colores Web GWW.pdf»).
+
+
+## Novedades V4
+- Hero rediseñado con imagen principal de río y tres tarjetas de monitoreo superpuestas.
+- Segunda sección territorial rediseñada con mapa de referencia de estética orgánica.
+- Incorporación de logos de Fundación Manzana Verde y Global Water Watch Chile.
+- Guía de nombres y ubicación de imágenes en `docs/ASIGNACION_IMAGENES_V4.md`.
