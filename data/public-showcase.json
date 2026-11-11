@@ -1,0 +1,162 @@
+[
+  {
+    "ciudad": "Los Lagos",
+    "region": "Los Ríos",
+    "cuenca": "Río Valdivia",
+    "cuerpo_agua": "Río Quinchilca",
+    "preocupacion_ambiental": "Usos intensivos del territorio y presión sobre el curso de agua; la ficha específica registra ganadería, producción láctea, forestal y balneario.",
+    "area_protegida": "No indicada en la ficha específica",
+    "usos_humanos": "Captación de agua potable, extracción de áridos, recreación y pesca deportiva",
+    "tipo_voluntarios": "Jorge Hernández, Camilo Toro, Javiera Díaz, Matías Montecinos, Nataly Navarro, Daniela Campos, Gabriela Mancilla y Marcelo Valencia",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Ficha “Quinchilca.xlsx - Características Generales.pdf”"
+  },
+  {
+    "ciudad": "Laja",
+    "region": "Biobío",
+    "cuenca": "Río Biobío",
+    "cuerpo_agua": "Laguna La Señoraza / entorno río Biobío",
+    "preocupacion_ambiental": "Procesadora y monocultivo forestal",
+    "area_protegida": "Normas Secundarias Río Biobío; La Señoraza (en trámite)",
+    "usos_humanos": "Educación, recreación y abastecimiento de agua",
+    "tipo_voluntarios": "Liceo Héroes de la Concepción",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "San Pedro de la Paz",
+    "region": "Biobío",
+    "cuenca": "No informada en la caracterización comunal",
+    "cuerpo_agua": "Humedal Bayona / Humedal Junquillar",
+    "preocupacion_ambiental": "Presión urbana y monocultivo forestal",
+    "area_protegida": "Humedal Urbano Bayona; solicitado Humedal Urbano Junquillar",
+    "usos_humanos": "Conservación, educación ambiental y uso comunitario del humedal",
+    "tipo_voluntarios": "Junquillar, JJVV Bayona",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Hualpén",
+    "region": "Biobío",
+    "cuenca": "No informada en la caracterización comunal",
+    "cuerpo_agua": "Humedal Price / Vasco da Gama",
+    "preocupacion_ambiental": "Presión urbana y conflictos inmobiliarios",
+    "area_protegida": "Humedal Urbano Vasco da Gama y Price",
+    "usos_humanos": "Conservación, educación y uso barrial del humedal",
+    "tipo_voluntarios": "Dirección Medio Ambiente, Chimalfe, Malvarrosa, Humedal Price",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Los Álamos",
+    "region": "Biobío",
+    "cuenca": "No informada en la caracterización comunal",
+    "cuerpo_agua": "Laguna Antihuala",
+    "preocupacion_ambiental": "Monocultivo forestal y agrotóxicos",
+    "area_protegida": "Área de Protección Privada Arauco; Tierras recuperadas",
+    "usos_humanos": "Uso comunitario, educación y resguardo territorial",
+    "tipo_voluntarios": "Comité Laguna Antihuala, Comunidad Rayén, CFT",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Maullín",
+    "region": "Los Lagos",
+    "cuenca": "Río Maullín",
+    "cuerpo_agua": "Humedales Río Maullín",
+    "preocupacion_ambiental": "Falta de planificación territorial",
+    "area_protegida": "Santuario de la Naturaleza Humedales Río Maullín",
+    "usos_humanos": "Conservación, educación y actividades locales asociadas al humedal",
+    "tipo_voluntarios": "CAC Maullín",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Valdivia",
+    "region": "Los Ríos",
+    "cuenca": "No informada en la caracterización comunal",
+    "cuerpo_agua": "Humedal Angachilla",
+    "preocupacion_ambiental": "Presión urbana",
+    "area_protegida": "Santuario de la Naturaleza Humedal Angachilla",
+    "usos_humanos": "Conservación, observación y educación ambiental",
+    "tipo_voluntarios": "Santuario Humedal Angachilla",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Coquimbo",
+    "region": "Coquimbo",
+    "cuenca": "No informada en la caracterización comunal",
+    "cuerpo_agua": "Humedal El Culebrón",
+    "preocupacion_ambiental": "Presión urbana sobre el humedal",
+    "area_protegida": "Humedal Urbano El Culebrón",
+    "usos_humanos": "Conservación y educación ambiental",
+    "tipo_voluntarios": "Surgencia",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Pucón",
+    "region": "La Araucanía",
+    "cuenca": "Lago Villarrica",
+    "cuerpo_agua": "Lago Villarrica y entorno",
+    "preocupacion_ambiental": "Piscicultura, monocultivo y gentrificación",
+    "area_protegida": "Normas Secundarias Lago Villarrica; Parque Nacional Huerquehue; Parque Nacional Villarrica",
+    "usos_humanos": "Turismo, recreación, educación y uso ecosistémico",
+    "tipo_voluntarios": "UFRO",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  },
+  {
+    "ciudad": "Alto Biobío",
+    "region": "Biobío",
+    "cuenca": "Río Biobío",
+    "cuerpo_agua": "Río Biobío / entorno Ralco",
+    "preocupacion_ambiental": "Hidroeléctrica y monocultivo",
+    "area_protegida": "Reserva Nacional Ralco; Normas Secundarias Río Biobío",
+    "usos_humanos": "Abastecimiento de agua y uso comunitario del territorio",
+    "tipo_voluntarios": "Kayakimun, Malen Leufu, Comité Agua Potable",
+    "monitoreo": [
+      "Fisicoquímico",
+      "Bacteriológico",
+      "Macroinvertebrados"
+    ],
+    "fuente": "Caracterización de equipos comunales"
+  }
+]
