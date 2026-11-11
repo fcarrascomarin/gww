@@ -1,42 +1,73 @@
 'use strict';
-/* Catálogo histórico/documental, NO datos de observación.
-   Fuente: Memoria Global Water Watch Chile 2024. No se atribuye a agrupaciones ni monitores. */
-const documentedWaters=[
- {name:'Río Elqui',region:'Coquimbo',type:'Río'},
- {name:'Río Penco',region:'Biobío',type:'Río'},
- {name:'Río Nonguén',region:'Biobío',type:'Río'},
- {name:'Río Andalién',region:'Biobío',type:'Río'},
- {name:'Río Laja',region:'Biobío',type:'Río'},
- {name:'Laguna La Señoraza',region:'Biobío',type:'Laguna'},
- {name:'Laguna Antihuala',region:'Biobío',type:'Laguna'},
- {name:'Humedal Price',region:'Biobío',type:'Humedal'},
- {name:'Humedal Los Batros',region:'Biobío',type:'Humedal'},
- {name:'Río Curanilahue',region:'Biobío',type:'Río'},
- {name:'Lago Villarrica',region:'La Araucanía',type:'Lago'},
- {name:'Humedal Angachilla',region:'Los Ríos',type:'Humedal'},
- {name:'Río Maullín',region:'Los Lagos',type:'Río'},
- {name:'Río Futaleufú',region:'Los Lagos',type:'Río'}
-];
-const $ = (id)=>document.getElementById(id);
-const strip=(s)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-const waterList=$('waterList'),search=$('waterSearch'),region=$('regionSelect'),info=$('waterInfo');
-let selected=null;
-function renderList(){
- const query=strip(search.value.trim());
- const match=documentedWaters.filter(w=>(region.value==='todos'||w.region===region.value)&&strip(w.name).includes(query));
- waterList.replaceChildren();
- if(!match.length){const p=document.createElement('p');p.textContent='No hay coincidencias en el catálogo histórico mostrado.';p.style.cssText='font-size:12px;color:#5d7278;padding:15px';waterList.append(p);return;}
- match.forEach(w=>{
-  const button=document.createElement('button');button.type='button';button.className='water-entry'+(selected===w.name?' selected':'');
-  const main=document.createElement('span');const title=document.createElement('strong');title.textContent=w.name;const desc=document.createElement('small');desc.textContent=`${w.type} · Región de ${w.region}`;main.append(title,desc);
-  const arr=document.createElement('span');arr.className='arr';arr.textContent='↗';button.append(main,arr);
-  button.addEventListener('click',()=>{selected=w.name;info.replaceChildren();const b=document.createElement('b');b.textContent=w.name;const s=document.createElement('span');s.textContent=`${w.type} · Región de ${w.region}. Mencionado en la Memoria GWW Chile 2024. Sin mediciones públicas habilitadas en esta versión; no se muestra localización exacta.`;info.append(b,s);renderList();});
-  waterList.append(button);
- });
+const $ = (id) => document.getElementById(id);
+
+const menuButton = $('menuButton');
+const nav = $('nav');
+if (menuButton && nav) {
+  menuButton.addEventListener('click', () => {
+    const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!expanded));
+    nav.classList.toggle('open', !expanded);
+  });
+  nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+  }));
 }
-if(waterList&&search&&region){search.addEventListener('input',renderList);region.addEventListener('change',renderList);renderList();}
-const tabHistory=$('tab-history'),tabPublic=$('tab-public'),panelHistory=$('panel-history'),panelPublic=$('panel-public');
-function tab(which){const history=which==='history';tabHistory.classList.toggle('active',history);tabPublic.classList.toggle('active',!history);tabHistory.setAttribute('aria-selected',String(history));tabPublic.setAttribute('aria-selected',String(!history));panelHistory.hidden=!history;panelPublic.hidden=history;}
-if(tabHistory&&tabPublic){tabHistory.addEventListener('click',()=>tab('history'));tabPublic.addEventListener('click',()=>tab('public'));}
-const menuButton=$('menuButton'),nav=$('nav');
-if(menuButton&&nav){menuButton.addEventListener('click',()=>{const expanded=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!expanded));nav.classList.toggle('open',!expanded)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}));}
+
+async function loadPublicShowcase() {
+  const container = $('publicCards');
+  const regionSelect = $('publicRegion');
+  const methodSelect = $('publicMethod');
+  const countNode = $('publicCount');
+  if (!container) return;
+  let entries = [];
+  try {
+    const response = await fetch('data/public-showcase.json');
+    entries = await response.json();
+  } catch (error) {
+    container.innerHTML = '<p class="load-error">No fue posible cargar la muestra pública.</p>';
+    return;
+  }
+
+  const render = () => {
+    const region = regionSelect?.value || 'Todas';
+    const method = methodSelect?.value || 'Todas';
+    const filtered = entries.filter((item) => {
+      const regionOk = region === 'Todas' || item.region === region;
+      const methodOk = method === 'Todas' || item.monitoreo.includes(method);
+      return regionOk && methodOk;
+    });
+    if (countNode) countNode.textContent = `${filtered.length} fichas públicas piloto`;
+    container.innerHTML = '';
+    filtered.forEach((item) => {
+      const card = document.createElement('article');
+      card.className = 'public-card';
+      card.innerHTML = `
+        <div class="public-card-head">
+          <div>
+            <span class="public-card-kicker">${item.region}</span>
+            <h3>${item.cuerpo_agua}</h3>
+            <p class="public-city">${item.ciudad}</p>
+          </div>
+          <span class="public-badge">${item.monitoreo.length} métodos</span>
+        </div>
+        <dl class="public-meta">
+          <div><dt>Cuenca</dt><dd>${item.cuenca}</dd></div>
+          <div><dt>Preocupación ambiental</dt><dd>${item.preocupacion_ambiental}</dd></div>
+          <div><dt>Área protegida</dt><dd>${item.area_protegida}</dd></div>
+          <div><dt>Usos humanos</dt><dd>${item.usos_humanos}</dd></div>
+          <div><dt>Voluntariado / equipo</dt><dd>${item.tipo_voluntarios}</dd></div>
+          <div><dt>Tipos de monitoreo</dt><dd>${item.monitoreo.join(', ')}</dd></div>
+        </dl>
+        <div class="public-card-foot">
+          <span>Fuente: ${item.fuente}</span>
+        </div>`;
+      container.appendChild(card);
+    });
+  };
+  regionSelect?.addEventListener('change', render);
+  methodSelect?.addEventListener('change', render);
+  render();
+}
+loadPublicShowcase();

@@ -41,3 +41,10 @@ Consulta la guía detallada en [`docs/GUIA_GITHUB_PAGES.md`](docs/GUIA_GITHUB_PA
 - Segunda sección territorial rediseñada con mapa de referencia de estética orgánica.
 - Incorporación de logos de Fundación Manzana Verde y Global Water Watch Chile.
 - Guía de nombres y ubicación de imágenes en `docs/ASIGNACION_IMAGENES_V4.md`.
+
+
+## V6
+- Hero corregido: imagen completamente de fondo, texto sobrepuesto y tres métodos en una fila con hover explicativo.
+- Mapa rediseñado como bloque conceptual inspirado en naturaleza, sin pegar la referencia del mapa.
+- Muestra pública piloto renderizada desde `data/public-showcase.json`.
+- Campos incorporados: ciudad, cuenca, cuerpo de agua, preocupación ambiental, área protegida, usos humanos, tipo de voluntarios y tipos de monitoreo.
