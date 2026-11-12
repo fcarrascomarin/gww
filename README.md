@@ -1,38 +1,34 @@
-# Global Water Watch Chile — Web pública V9
+# GWW Chile — Web externa V11
 
-**Preparada para GitHub Pages.** Sitio público del programa Global Water Watch Chile, en coordinación con Fundación Manzana Verde.
+Versión integral del sitio basada en V10, reorganizada por la secuencia acordada:
 
-## Qué incluye
+1. Hero (incluye tres gotas interactivas)
+2. Quiénes somos (incluye cifras históricas 2024, sin título propio para las cifras)
+3. Nuestra red (logos institucionales y agrupaciones expresamente autorizadas)
+4. Qué hacemos (tres resultados del programa, imágenes documentales y cuatro videos)
+5. Mapa del agua (mapa geográfico real, sección propia, únicamente cuerpos de agua autorizados)
+6. Cómo sumarse (contacto solo para organizaciones territoriales interesadas en cuerpos de agua)
 
-- Hero fotográfico con transición suave entre paisaje y trabajo comunitario, título breve centrado y tres gotas interactivas.
-- Indicadores históricos de la memoria 2024 fuera del hero, sobre fotografía documental.
-- «Quiénes somos» y «Ciencia para cuidar» con fotografías del brochure.
-- «Mapa del agua» como sección **propia** con Leaflet/OpenStreetMap real, búsqueda y ficha lateral.
-- «Nuestra red»: logos institucionales presentes y mecanismo para añadir logos de agrupaciones autorizados.
-- «Memoria viva»: cuatro videos enlazados por el usuario, presentados en un reproductor que solo se carga tras clic.
-- «Contacto»: solo para organizaciones territoriales que buscan conocer o proteger cuerpos de agua. No contiene formulario de inscripción individual, oferta comercial o venta de certificaciones.
+No hay sección separada de «Trayectoria» ni «Memoria viva». La información se integra a «Quiénes somos» y «Qué hacemos» para evitar repetición de títulos.
 
-## Publicar en GitHub Pages
+## Instalación
 
-1. Descarga y descomprime este ZIP; **no subas el ZIP como si fuera la web**.
-2. En el repositorio `fcarrascomarin/gww`, reemplaza los archivos anteriores del sitio por **el contenido** de la carpeta del ZIP. Mantén el repositorio Git o utiliza GitHub Desktop para registrar y subir los cambios; no borres `.git`.
-3. Comprueba que `index.html`, `styles.css`, `app.js`, `mapa.css`, `mapa.js`, `assets/` y `data/` estén directamente en la raíz.
-4. En GitHub → Settings → Pages, selecciona `Deploy from a branch`, `main`, `/(root)`.
-5. Comprueba el sitio en `https://fcarrascomarin.github.io/gww/` y el pie **«Web externa V9»**. Fuerza recarga con `Ctrl + F5` si ves archivos antiguos.
-6. Para confirmar el mapa, abre `#mapa`: debes poder **arrastrar y hacer zoom sobre un mapa geográfico real de Chile**. Si aparece un mensaje de error, revisa la red y los bloqueadores; hay dependencia de la biblioteca Leaflet y las teselas OSM.
+1. Descarga el ZIP y extrae **su contenido** (no la carpeta contenedora ni el ZIP) en la raíz de tu repositorio `fcarrascomarin/gww`.
+2. Reemplaza los antiguos archivos del sitio; conserva `.git` si usas GitHub Desktop.
+3. Deben quedar directamente en la raíz `index.html`, `styles.css`, `hero-v10.css`, `v11-sections.css`, `app.js`, `mapa.css`, `mapa.js`, `assets/` y `data/`.
+4. Publica en GitHub Pages desde la rama `main` y la carpeta `/(root)`.
+5. Comprueba que el pie diga `Web externa V11` y refresca con Ctrl+F5.
 
-## Importante sobre el mapa
+## Precauciones de datos
 
-`data/cuerpos-agua-publicos.geojson` **está vacío intencionalmente**. La cartografía real funciona, pero no hay cuerpos de agua marcados hasta contar con geometrías y fichas autorizadas. Nunca atribuyas ubicaciones comunales a estaciones reales sin validación. No hay mediciones numéricas ni datos de agrupaciones/voluntarios en el mapa público.
+`data/cuerpos-agua-publicos.geojson` comienza vacío; solo debe recibir cuerpos de agua con geometría y campos de publicación autorizados. Los logos de agrupaciones se incorporan a `assets/logos-red/` y `data/logos-red.json` cuando haya autorización institucional expresa. No subir listados internos de agrupaciones, monitores, estaciones sensibles o certificaciones personales al repositorio público.
 
-## Configuración editable
+## Edición
 
-- `data/logos-red.json` — logos de agrupaciones autorizadas (inicialmente vacío).
-- `data/videos.json` — cuatro videos del usuario; títulos provisionales hasta verificación.
-- `data/cuerpos-agua-publicos.geojson` — solo información validada y autorizada.
-- `assets/` — fotos, logo, silueta de gota y portadas.
-- `styles.css` — tamaños, paleta y composición.
-
-Consulta la carpeta `docs/` para reglas de edición, permisos y datos.
-
-**Titularidad y mantenimiento:** los activos y cuentas de publicación deben permanecer bajo control institucional de GWW Chile/Fundación Manzana Verde. Los archivos de terceros tienen sus propios derechos y se utilizan sujetos a las autorizaciones correspondientes.
+- `index.html`: estructura del contenido y orden de secciones.
+- `v11-sections.css`: estilos de la arquitectura compacta de V11.
+- `hero-v10.css`: gotas orgánicas y composición de hero.
+- `styles.css`: estilos generales.
+- `data/videos.json`: metadatos de los cuatro enlaces audiovisuales; validar títulos.
+- `data/logos-red.json`: logos autorizados.
+- `data/cuerpos-agua-publicos.geojson`: datos aprobados del mapa público.

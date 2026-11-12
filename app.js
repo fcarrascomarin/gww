@@ -1,4 +1,4 @@
-/* Web externa GWW Chile V9. Sin información de agrupaciones ni voluntariado en el mapa.
+/* Web externa GWW Chile V10. Sin información de agrupaciones ni voluntariado en el mapa.
    Nunca subir bases de datos internas a un repositorio público. */
 (() => {
   'use strict';
@@ -34,21 +34,39 @@
       text:'La observación de macroinvertebrados bentónicos permite conocer características de los ecosistemas acuáticos. Los organismos presentan diferentes grados de sensibilidad o tolerancia ante alteraciones ambientales.'
     }
   };
-  const methodDialog=byId('method-dialog');
-  let lastMethodTrigger=null;
-  document.querySelectorAll('.drop-button').forEach(button => button.addEventListener('click', () => {
+  // V10: gotas orgánicas; expansión en el propio paisaje, sin ventanas modales.
+  const garden=byId('metodos');
+  const explainer=byId('method-explainer');
+  const dropButtons=[...document.querySelectorAll('.water-drop')];
+  let activeDrop=null;
+  function clearMethod(restoreFocus=false){
+    const prior=activeDrop;
+    activeDrop=null;
+    garden?.classList.remove('has-active-drop');
+    dropButtons.forEach(b=>{b.classList.remove('is-active');b.setAttribute('aria-pressed','false');});
+    if(explainer)explainer.hidden=true;
+    if(restoreFocus&&prior)prior.focus();
+  }
+  function selectMethod(button){
     const method=methods[button.dataset.method];
-    if(!method || !methodDialog)return;
-    byId('dialog-method-title').textContent=method.title;
-    byId('dialog-method-image').src=method.image;
-    byId('dialog-method-image').alt=`Imagen representativa de ${method.title.toLowerCase()}`;
-    byId('dialog-method-text').textContent=method.text;
-    lastMethodTrigger=button;
-    methodDialog.showModal();
-  }));
-  byId('dialog-close')?.addEventListener('click',()=>methodDialog.close());
-  methodDialog?.addEventListener('click',(event)=>{if(event.target===methodDialog)methodDialog.close();});
-  methodDialog?.addEventListener('close',()=>lastMethodTrigger?.focus());
+    if(!method||!explainer)return;
+    if(activeDrop===button){clearMethod(true);return;}
+    activeDrop=button;
+    garden?.classList.add('has-active-drop');
+    dropButtons.forEach(b=>{
+      const on=b===button;
+      b.classList.toggle('is-active',on);
+      b.setAttribute('aria-pressed',String(on));
+    });
+    byId('method-explainer-title').textContent=method.title;
+    byId('method-explainer-text').textContent=method.text;
+    explainer.hidden=false;
+  }
+  dropButtons.forEach(button=>button.addEventListener('click',()=>selectMethod(button)));
+  byId('method-explainer-close')?.addEventListener('click',()=>clearMethod(true));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&activeDrop){clearMethod(true);}
+  });
 
   async function readJson(path) {
     const response=await fetch(path,{cache:'no-cache'});
