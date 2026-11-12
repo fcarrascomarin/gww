@@ -44,6 +44,8 @@
     add('Áreas protegidas relacionadas',p.area_protegida);
     add('Usos humanos',p.usos_humanos);
     add('Métodos autorizados para difusión',p.metodos_publicos);
+    if (p.precision_publica) add('Precisión cartográfica',p.precision_publica);
+    if (p.fuente_publica) add('Fuente pública',p.fuente_publica);
     detail.append(fields);
     detail.append(el('p','gwwm-note','La presencia en el mapa no equivale a una conclusión sobre la calidad del agua.'));
   }

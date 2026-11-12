@@ -1,4 +1,4 @@
-/* Web externa GWW Chile V10. Sin información de agrupaciones ni voluntariado en el mapa.
+/* Web externa GWW Chile V14. Sin información de agrupaciones ni voluntariado en el mapa.
    Nunca subir bases de datos internas a un repositorio público. */
 (() => {
   'use strict';
@@ -37,7 +37,7 @@
   // V10: gotas orgánicas; expansión en el propio paisaje, sin ventanas modales.
   const garden=byId('metodos');
   const explainer=byId('method-explainer');
-  const dropButtons=[...document.querySelectorAll('.water-drop')];
+  const dropButtons=[...document.querySelectorAll('.method-object')];
   let activeDrop=null;
   function clearMethod(restoreFocus=false){
     const prior=activeDrop;
