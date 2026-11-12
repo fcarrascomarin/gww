@@ -97,3 +97,34 @@
   .method-explainer{bottom:182px}
 }
 @media(prefers-reduced-motion:reduce){.water-drop,.water-drop__portrait,.water-drop__portrait img{transition:none!important}.method-explainer{animation:none}}
+
+
+/* V13: fotos de las gotas ya recortadas con transparencia real en PNG.
+   No aplicar máscara SVG externa: en GitHub Pages / Chrome ocultaba completamente las fotos.
+   El PNG funciona como imagen normal, incluso si falla la carga de CSS avanzado. */
+.water-drop__portrait{
+  background:transparent!important;
+  -webkit-mask:none!important;
+  mask:none!important;
+  overflow:visible!important;
+  opacity:1!important;
+}
+.water-drop__portrait::before,.water-drop__caustic{display:none!important}
+.water-drop__portrait img{
+  display:block!important;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain!important;
+  object-position:center!important;
+  opacity:1!important;
+  mix-blend-mode:normal;
+  filter:none!important;
+}
+.water-drop.is-active .water-drop__portrait img { filter:none!important; }
+/* Captions remain modest; the photos are fully legible without becoming cards. */
+.water-drop__name{background:rgba(6,34,41,.42);color:#fff}
+
+/* V13: el bloque explicativo debe ser siempre legible al abrirse; no depender de una animación que pueda permanecer en el fotograma inicial. */
+.method-explainer:not([hidden]){animation:none!important;opacity:1!important;visibility:visible!important;z-index:10}
