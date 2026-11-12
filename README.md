@@ -9,15 +9,6 @@ Versión integral del sitio basada en V10, reorganizada por la secuencia acordad
 5. Mapa del agua (mapa geográfico real, sección propia, únicamente cuerpos de agua autorizados)
 6. Cómo sumarse (contacto solo para organizaciones territoriales interesadas en cuerpos de agua)
 
-No hay sección separada de «Trayectoria» ni «Memoria viva». La información se integra a «Quiénes somos» y «Qué hacemos» para evitar repetición de títulos.
-
-## Instalación
-
-1. Descarga el ZIP y extrae **su contenido** (no la carpeta contenedora ni el ZIP) en la raíz de tu repositorio `fcarrascomarin/gww`.
-2. Reemplaza los antiguos archivos del sitio; conserva `.git` si usas GitHub Desktop.
-3. Deben quedar directamente en la raíz `index.html`, `styles.css`, `hero-v10.css`, `v11-sections.css`, `app.js`, `mapa.css`, `mapa.js`, `assets/` y `data/`.
-4. Publica en GitHub Pages desde la rama `main` y la carpeta `/(root)`.
-5. Comprueba que el pie diga `Web externa V13` y refresca con Ctrl+F5.
 
 ## Precauciones de datos
 
@@ -34,7 +25,3 @@ No hay sección separada de «Trayectoria» ni «Memoria viva». La información
 - `data/cuerpos-agua-publicos.geojson`: datos aprobados del mapa público.
 
 
-## Corrección V13 — fotos de las gotas
-Los recursos `assets/gota-*-foto.png` tienen la fotografía y la silueta de gota integradas en un archivo PNG con transparencia. No dependen de CSS `mask` con SVG externo, que en la publicación pública podía hacer las imágenes invisibles.
-Para ver la versión correcta, confirmar la etiqueta `Web externa V13` en el pie de página.
-La descripción de las metodologías sigue abriéndose al otro extremo del hero.
