@@ -1,0 +1,33 @@
+/* GWW Chile — sección independiente del mapa; no altera el hero */
+.gwwm-section{--gwwm-blue:#2484BF;--gwwm-cream:#F2EBD5;--gwwm-green:#66824F;--gwwm-ink:#163A49;background:linear-gradient(180deg,#F2EBD5 0%,#F7F9F5 100%);padding:clamp(35px,6vh,65px) 0;color:var(--gwwm-ink)}
+.gwwm-section *{box-sizing:border-box}
+.gwwm-container{width:min(1340px,calc(100% - 48px));margin-inline:auto}
+.gwwm-heading{text-align:center;max-width:700px;margin:0 auto clamp(22px,3vh,34px)}
+.gwwm-kicker{color:#426B63;font-size:.72rem;font-weight:800;letter-spacing:.17em;margin:0 0 9px}
+.gwwm-heading h2{font:500 clamp(2rem,3.3vw,3.4rem)/1.13 Georgia,serif;letter-spacing:-.035em;margin:0 auto 12px;text-align:center;color:var(--gwwm-ink)}
+.gwwm-heading>p:last-child{max-width:520px;margin:0 auto;color:#48616B;font-size:clamp(.9rem,1.2vw,1.05rem);line-height:1.55;text-align:center}
+.gwwm-explorer{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(270px,.85fr);border-radius:22px;overflow:hidden;background:#fff;min-height:480px;box-shadow:0 15px 38px rgba(31,66,59,.11);border:1px solid #DCE3DE}
+.gwwm-map-column{min-width:0;display:flex;flex-direction:column}
+.gwwm-controls{display:flex;align-items:flex-end;flex-wrap:wrap;gap:10px;padding:12px 14px;background:#fff;border-bottom:1px solid #E6ECE9}
+.gwwm-field{display:flex;flex:1 1 120px;min-width:115px;flex-direction:column;gap:4px;font-size:.67rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#557077}
+.gwwm-field:first-child{flex:1.7 1 180px}
+.gwwm-field input,.gwwm-field select{width:100%;min-width:0;height:36px;border-radius:7px;border:1px solid #CFDCD6;padding:7px 10px;background:#fff;color:#173B48;font:400 .88rem/1.2 system-ui,sans-serif}
+.gwwm-reset{border:0;background:#e3f0f8;color:#12537d;border-radius:7px;height:36px;padding:0 14px;font-weight:700;cursor:pointer;white-space:nowrap}
+.gwwm-map{height:clamp(345px,52vh,530px);min-height:345px;width:100%;position:relative;background:#e4eee8}
+.gwwm-status{position:absolute;z-index:450;top:15px;left:15px;right:15px;padding:11px 14px;border:1px solid #cbdad5;border-radius:8px;background:rgba(255,255,255,.95);font-size:.85rem;color:#385b61;box-shadow:0 2px 9px rgba(0,0,0,.06)}
+.gwwm-meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#fff;padding:11px 14px;color:#566b6f;font-size:.72rem}
+.gwwm-detail{padding:23px 23px 27px;border-left:1px solid #E6ECE9;min-width:0;overflow:auto;max-height:calc(clamp(345px,52vh,530px) + 95px);font-size:.92rem}
+.gwwm-detail-eyebrow{font-size:.69rem;letter-spacing:.14em;font-weight:800;color:#62825b;margin:0 0 12px}
+.gwwm-detail h3{font:500 clamp(1.4rem,2vw,2rem)/1.13 Georgia,serif;color:#163A49;margin:0 0 12px}
+.gwwm-detail p{line-height:1.65;color:#4F6368;margin:0 0 12px}
+.gwwm-note{padding:12px;background:#f0f6f3;border-left:3px solid #66824F;font-size:.83rem}
+.gwwm-fields{margin:15px 0 0}
+.gwwm-fields>div{padding:9px 0;border-bottom:1px solid #eef2ef}
+.gwwm-fields dt{font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#5E777B;font-size:.68rem;margin-bottom:4px}
+.gwwm-fields dd{margin:0;color:#254650;line-height:1.5;overflow-wrap:anywhere}
+.gwwm-close{border:1px solid #c5d5cf;background:#fff;color:#254650;border-radius:7px;padding:7px 12px;cursor:pointer;margin:0 0 12px}
+.gwwm-footer-note{text-align:center;font-size:.76rem;line-height:1.5;color:#587078;max-width:850px;margin:15px auto 0}
+.gwwm-section .leaflet-container{font-family:system-ui,Arial,sans-serif}
+.gwwm-section .leaflet-popup-content{margin:9px 13px;font-size:.88rem}
+@media(max-width:900px){.gwwm-explorer{grid-template-columns:1fr}.gwwm-detail{border-left:0;border-top:1px solid #E6ECE9;max-height:none;min-height:140px}.gwwm-map{height:52vh;min-height:345px}}
+@media(max-width:520px){.gwwm-container{width:calc(100% - 24px)}.gwwm-controls{padding:10px}.gwwm-field{flex:1 1 140px}.gwwm-field:first-child{flex:1 1 100%}.gwwm-heading{margin-bottom:22px}.gwwm-detail{padding:18px}.gwwm-meta{font-size:.7rem}}

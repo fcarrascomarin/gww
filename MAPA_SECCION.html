@@ -1,0 +1,38 @@
+<!-- INICIO: sección independiente Mapa del agua; insertar entre Ciencia para cuidar y Nuestra red -->
+<section id="mapa" class="gwwm-section" aria-labelledby="gwwm-title">
+  <div class="gwwm-container">
+    <header class="gwwm-heading">
+      <p class="gwwm-kicker">CARTOGRAFÍA COLABORATIVA</p>
+      <h2 id="gwwm-title">Mapa del agua</h2>
+      <p>Explora los cuerpos de agua con información autorizada para su difusión.</p>
+    </header>
+    <div class="gwwm-explorer">
+      <div class="gwwm-map-column">
+        <div class="gwwm-controls">
+          <label class="gwwm-field">Buscar
+            <input id="gwwm-search" type="search" placeholder="Río, lago, laguna o comuna" autocomplete="off">
+          </label>
+          <label class="gwwm-field">Región
+            <select id="gwwm-region"><option value="">Todas las regiones</option></select>
+          </label>
+          <label class="gwwm-field">Tipo
+            <select id="gwwm-kind"><option value="">Todos los tipos</option></select>
+          </label>
+          <button class="gwwm-reset" type="button" id="gwwm-reset">Ver Chile</button>
+        </div>
+        <div id="gwwm-map" class="gwwm-map" role="region" aria-label="Mapa interactivo real de Chile">
+          <div id="gwwm-status" class="gwwm-status" role="status">Cargando cartografía…</div>
+        </div>
+        <div class="gwwm-meta"><span id="gwwm-count">Cargando fichas públicas…</span><span>Geometrías referenciales o autorizadas · No se muestran estaciones sensibles</span></div>
+      </div>
+      <aside id="gwwm-detail" class="gwwm-detail" aria-live="polite" aria-label="Ficha pública del cuerpo de agua">
+        <p class="gwwm-detail-eyebrow">INFORMACIÓN TERRITORIAL</p>
+        <h3>Selecciona un cuerpo de agua</h3>
+        <p>Haz clic sobre una geometría del mapa. Aquí aparecerán sus antecedentes aprobados para publicación.</p>
+        <p class="gwwm-note">La presencia de un cuerpo de agua en el mapa no representa por sí misma una evaluación de su calidad.</p>
+      </aside>
+    </div>
+    <p class="gwwm-footer-note">Este mapa contiene únicamente información que cuenta con revisión y autorización de difusión. No muestra agrupaciones, voluntarios ni puntos exactos de muestreo.</p>
+  </div>
+</section>
+<!-- FIN: sección Mapa del agua -->
