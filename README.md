@@ -1,4 +1,4 @@
-# GWW Chile — Web externa V11
+# GWW Chile — Web externa V12
 
 Versión integral del sitio basada en V10, reorganizada por la secuencia acordada:
 
@@ -17,7 +17,7 @@ No hay sección separada de «Trayectoria» ni «Memoria viva». La información
 2. Reemplaza los antiguos archivos del sitio; conserva `.git` si usas GitHub Desktop.
 3. Deben quedar directamente en la raíz `index.html`, `styles.css`, `hero-v10.css`, `v11-sections.css`, `app.js`, `mapa.css`, `mapa.js`, `assets/` y `data/`.
 4. Publica en GitHub Pages desde la rama `main` y la carpeta `/(root)`.
-5. Comprueba que el pie diga `Web externa V11` y refresca con Ctrl+F5.
+5. Comprueba que el pie diga `Web externa V12` y refresca con Ctrl+F5.
 
 ## Precauciones de datos
 
@@ -26,7 +26,7 @@ No hay sección separada de «Trayectoria» ni «Memoria viva». La información
 ## Edición
 
 - `index.html`: estructura del contenido y orden de secciones.
-- `v11-sections.css`: estilos de la arquitectura compacta de V11.
+- `v11-sections.css`: estilos de la arquitectura compacta de V12.
 - `hero-v10.css`: gotas orgánicas y composición de hero.
 - `styles.css`: estilos generales.
 - `data/videos.json`: metadatos de los cuatro enlaces audiovisuales; validar títulos.
