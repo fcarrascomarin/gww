@@ -1,6 +1,22 @@
 [
-  {"id":"xzONcU-ifWU","label":"Registro audiovisual 01","poster":"assets/brochure-portada.webp"},
-  {"id":"O1_sjzFpfEQ","label":"Registro audiovisual 02","poster":"assets/brochure-educacion.webp"},
-  {"id":"65gruzIz8HA","label":"Registro audiovisual 03","poster":"assets/brochure-equipo.webp"},
-  {"id":"-by1LHLd_xo","label":"Registro audiovisual 04","poster":"assets/gww-p5-21.webp"}
+  {
+    "id": "xzONcU-ifWU",
+    "label": "Registro audiovisual 01",
+    "poster": "assets/brochure-terreno.webp"
+  },
+  {
+    "id": "O1_sjzFpfEQ",
+    "label": "Registro audiovisual 02",
+    "poster": "assets/brochure-educacion.webp"
+  },
+  {
+    "id": "65gruzIz8HA",
+    "label": "Registro audiovisual 03",
+    "poster": "assets/brochure-equipo.webp"
+  },
+  {
+    "id": "-by1LHLd_xo",
+    "label": "Registro audiovisual 04",
+    "poster": "assets/gww-p11-80.webp"
+  }
 ]
