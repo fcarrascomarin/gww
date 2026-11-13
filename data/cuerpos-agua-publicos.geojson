@@ -1,4 +1,459 @@
 {
   "type": "FeatureCollection",
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "id": "humedal-los-boldos",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.037,
+          -36.9118
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Los Boldos",
+        "tipo": "Humedal",
+        "region": "Biobío",
+        "comuna": "Chiguayante",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Monocultivo forestal; torres de alta tensión; contaminación del río Biobío (preocupaciones del equipo comunal, no diagnóstico específico del humedal)"
+        ],
+        "area_protegida": [
+          "Paisaje de conservación territorio Nonguén; Humedal Los Boldos (mencionados en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 4)",
+        "fuente_geo": "https://mapcarta.com/es/W1333543924",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "rio-biobio",
+      "geometry": null,
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Río Biobío",
+        "tipo": "Río",
+        "region": "Biobío",
+        "comuna": "Diversas comunas",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Hidroeléctricas, monocultivo forestal y contaminación (contextos reportados en distintas comunas)"
+        ],
+        "area_protegida": [
+          "Normas Secundarias Río Biobío (referencia del listado, no declaración de área protegida)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Sin ubicación confirmada para representación cartográfica",
+        "estado_geografico": "pendiente",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 1, 4, 14, 15)",
+        "fuente_geo": null,
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-culebron",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.322,
+          -29.9622
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal El Culebrón",
+        "tipo": "Humedal",
+        "region": "Coquimbo",
+        "comuna": "Coquimbo",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Presión urbana sobre humedal El Culebrón (listado comunal)"
+        ],
+        "area_protegida": [
+          "Humedal Urbano El Culebrón (denominación usada en el listado; verificar situación jurídica vigente)"
+        ],
+        "usos_humanos": [
+          "Conservación (uso señalado en la fila comunal)"
+        ],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 6)",
+        "fuente_geo": "https://archivocambioclimatico.mma.gob.cl/wp-content/uploads/2020/04/2019-10-22-Informe-V06-CCCostas-Humedales-Rev1.pdf",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lago-llanquihue",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.80998,
+          -41.13239
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Lago Llanquihue",
+        "tipo": "Lago",
+        "region": "Los Lagos",
+        "comuna": "Frutillar y otras comunas",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Gentrificación, lecherías y agrotóxicos (preocupaciones registradas para Frutillar)"
+        ],
+        "area_protegida": [
+          "Normas Secundarias Lago Llanquihue (instrumento mencionado en listado)"
+        ],
+        "usos_humanos": [
+          "Observación de aves (uso de interés consignado para Frutillar)"
+        ],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 10)",
+        "fuente_geo": "https://mapcarta.com/es/20111590",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-price",
+      "geometry": null,
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Price",
+        "tipo": "Humedal",
+        "region": "Biobío",
+        "comuna": "Hualpén",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Presión urbana y conflictos inmobiliarios (listado para Hualpén)"
+        ],
+        "area_protegida": [
+          "Humedal urbano Price (mencionado en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Sin ubicación confirmada para representación cartográfica",
+        "estado_geografico": "pendiente",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 13)",
+        "fuente_geo": null,
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-vasco-gama",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.0734,
+          -36.8017
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Vasco da Gama",
+        "tipo": "Humedal",
+        "region": "Biobío",
+        "comuna": "Hualpén",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Presión urbana y conflictos inmobiliarios (listado para Hualpén)"
+        ],
+        "area_protegida": [
+          "Humedal urbano Vasco da Gama (mencionado en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 13)",
+        "fuente_geo": "https://gefhumedales.mma.gob.cl/wp-content/uploads/2025/03/Informe-monitoreo-Aves-sitio-Prioritario-H.-Rocuant-Andalien-Verano-2024.pdf",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "laguna-senoraza",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.70134,
+          -37.27674
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Laguna La Señoraza",
+        "tipo": "Laguna",
+        "region": "Biobío",
+        "comuna": "Laja",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Actividad de procesamiento y monocultivo forestal (preocupación comunal)"
+        ],
+        "area_protegida": [
+          "La Señoraza (se indica «en trámite» en el documento; situación actual no validada)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 15)",
+        "fuente_geo": "https://es.wikipedia.org/wiki/Laguna_La_Se%C3%B1oraza",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedales-rio-maullin",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.0086,
+          -41.26561
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedales del río Maullín",
+        "tipo": "Humedal",
+        "region": "Los Lagos",
+        "comuna": "Maullín y cuenca del río Maullín",
+        "cuenca": "Río Maullín",
+        "preocupacion_ambiental": [
+          "Falta de planificación territorial (listado comunal)"
+        ],
+        "area_protegida": [
+          "Santuario de la Naturaleza Humedales Río Maullín (mencionado en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 18)",
+        "fuente_geo": "https://mapcarta.com/es/20106278",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lago-villarrica",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.08333,
+          -39.25
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Lago Villarrica",
+        "tipo": "Lago",
+        "region": "La Araucanía",
+        "comuna": "Pucón y Villarrica",
+        "cuenca": "Río Toltén",
+        "preocupacion_ambiental": [
+          "Piscicultura, monocultivo y gentrificación (preocupaciones comunales)"
+        ],
+        "area_protegida": [
+          "Normas secundarias Lago Villarrica; parques nacionales Huerquehue y Villarrica (mencionados en listado; los parques no se confunden con el lago)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 20 y 34)",
+        "fuente_geo": "https://www.munivillarrica.cl/volcan-y-lago/",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-guairabo",
+      "geometry": null,
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Guairabo",
+        "tipo": "Humedal",
+        "region": "Magallanes y de la Antártica Chilena",
+        "comuna": "Cabo de Hornos / Puerto Williams",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [],
+        "area_protegida": [
+          "Reserva de la Biósfera; Parque Omora; Humedal Guairabo (referencias de la fila Puerto Williams)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Sin ubicación confirmada para representación cartográfica",
+        "estado_geografico": "pendiente",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 22)",
+        "fuente_geo": null,
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-bayona",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.1161,
+          -36.8434
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Bayona del Valle",
+        "tipo": "Humedal",
+        "region": "Biobío",
+        "comuna": "San Pedro de la Paz",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Presión urbana y monocultivo forestal (preocupaciones del equipo comunal)"
+        ],
+        "area_protegida": [
+          "Humedal Urbano Bayona (mencionado en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 24)",
+        "fuente_geo": "https://mapcarta.com/es/W1084095422",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-junquillar",
+      "geometry": null,
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Junquillar",
+        "tipo": "Humedal",
+        "region": "Biobío",
+        "comuna": "San Pedro de la Paz",
+        "cuenca": "No especificada para este cuerpo de agua en el documento",
+        "preocupacion_ambiental": [
+          "Presión urbana y monocultivo forestal (preocupaciones del equipo comunal)"
+        ],
+        "area_protegida": [
+          "Humedal Junquillar (solicitud de reconocimiento mencionada en listado; revisar expediente actual)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Sin ubicación confirmada para representación cartográfica",
+        "estado_geografico": "pendiente",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 24)",
+        "fuente_geo": null,
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-rio-maipo",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.628365,
+          -33.619793
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Río Maipo",
+        "tipo": "Humedal",
+        "region": "Valparaíso",
+        "comuna": "Santo Domingo / San Antonio",
+        "cuenca": "Río Maipo",
+        "preocupacion_ambiental": [
+          "Presión urbana (preocupación del equipo comunal)"
+        ],
+        "area_protegida": [
+          "Santuario de la Naturaleza Río Maipo (mencionado en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 27)",
+        "fuente_geo": "https://estrategia-aves.mma.gob.cl/wp-content/uploads/2023/03/Garcia_etal_2017_Atlas-de-aves-playeras-de-Chile.pdf",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "humedal-angachilla",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.2139,
+          -39.8589
+        ]
+      },
+      "properties": {
+        "mostrar_referencia_publica": true,
+        "aprobado_publicacion": false,
+        "tipo_ficha": "referencia_documental_preliminar",
+        "nombre": "Humedal Angachilla",
+        "tipo": "Humedal",
+        "region": "Los Ríos",
+        "comuna": "Valdivia",
+        "cuenca": "Río Valdivia",
+        "preocupacion_ambiental": [
+          "Presión urbana (preocupación del equipo comunal)"
+        ],
+        "area_protegida": [
+          "Santuario de la Naturaleza Humedal Angachilla (mencionado en listado)"
+        ],
+        "usos_humanos": [],
+        "metodos_publicos": [],
+        "precision_publica": "Ubicación general del cuerpo de agua; NO estación GWW",
+        "estado_geografico": "referencial",
+        "fuente_publica": "Caracterización de equipos comunales (ficha de trabajo recibida; fila 32)",
+        "fuente_geo": "https://biblioteca.cehum.org/handle/CEHUM2018/1710",
+        "observacion_publica": "Referencia preliminar para revisión. La mención no acredita monitoreo activo ni resultados disponibles."
+      }
+    }
+  ]
 }
