@@ -87,24 +87,29 @@ button{cursor:pointer}
 
 /* Identidad, cifras y organizaciones reunidas en una sola sección. */
 .identity{background:#fafaf6}
-.identity-story{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(25px,5vw,65px);align-items:center;max-width:1050px;margin:auto}
-.identity-photo{border-radius:17px;overflow:hidden}
-.identity-photo img{width:100%;height:270px;object-fit:cover}
-.identity-copy{max-width:510px}
-.identity-copy p{font-size:15px;line-height:1.85;color:#33535a;margin-bottom:12px}
+.identity-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.96fr);gap:clamp(26px,5vw,66px);align-items:center;max-width:1120px;margin:auto}
+.identity-photo{border-radius:22px;overflow:hidden;box-shadow:0 18px 42px rgba(10,54,58,.12)}
+.identity-photo img{width:100%;height:340px;object-fit:cover}
+.identity-copy{max-width:540px}
+.identity-copy p{font-size:15px;line-height:1.9;color:#33535a;margin-bottom:12px}
 .identity-copy p:last-child{margin-bottom:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:890px;margin:24px auto 0;text-align:center;gap:0}
+.network-ribbon{position:relative;margin:30px auto 0;border-radius:24px;overflow:hidden;min-height:230px;display:flex;align-items:center;box-shadow:0 18px 42px rgba(10,54,58,.12)}
+.network-ribbon__backdrop{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,56,68,.86),rgba(9,56,68,.72)),url('assets/red-aerea.jpg') center/cover no-repeat}
+.network-ribbon__content{position:relative;z-index:1;width:100%;padding:28px clamp(22px,4vw,42px);display:grid;gap:14px;justify-items:center;text-align:center;color:#fff}
+.network-caption{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#cde6df}
+.network-text{max-width:760px;font-size:14px;line-height:1.65;color:#f2f8f7}
+.network-logos-wrap{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 28px;width:100%}
+.network-logo{height:72px;width:auto;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.18))}
+.organization-logos{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center}
+.organization-logo{display:flex;flex-direction:column;align-items:center;gap:8px;max-width:110px}
+.organization-logo img{max-height:58px;width:auto;object-fit:contain}
+.organization-logo span{font-size:10px;color:#eef5f4;text-align:center;line-height:1.35}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:920px;margin:28px auto 0;text-align:center;gap:0}
 .stats>div{padding:2px 18px;border-right:1px solid var(--line)}
 .stats>div:nth-child(3){border-right:0}
 .stats strong{display:block;font:500 clamp(35px,4vw,48px)/1.05 var(--serif);color:var(--deep)}
 .stats span{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:5px}
 .stats p{grid-column:1/-1;color:#668081;font-size:10px;margin-top:9px}
-.network-strip{margin:25px auto 0;padding:19px 15px 5px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px;align-items:center}
-.network-caption{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.16em;color:var(--green)}
-.network-logo{width:75px;height:64px;object-fit:contain}
-.organization-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px 22px}
-.organization-logo{display:flex;align-items:center;gap:8px;color:var(--ink);font-size:11px;font-weight:700}
-.organization-logo img{width:64px;height:59px;object-fit:contain}
 
 /* Tres videos que muestran la actividad sin duplicar archivo audiovisual. */
 .science{background:#eef3ef}
@@ -125,42 +130,47 @@ button{cursor:pointer}
 
 /* Cartografía como pieza principal: fondo claro, filtros mínimos y fichas discretas. */
 .map-section{background:#f8faf9}
-.map-shell{display:grid;grid-template-columns:minmax(0,1fr) 280px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(14,58,61,.06)}
-.map-main{min-width:0;display:flex;flex-direction:column}
-.map-filters{padding:11px;display:flex;align-items:end;gap:9px;background:#fff;border-bottom:1px solid var(--line)}
+.map-shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,1fr);background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 22px rgba(14,58,61,.06)}
+.map-main{min-width:0;padding:16px;display:grid;grid-template-rows:auto auto auto auto;align-content:start}
+.map-filters{display:flex;gap:12px;align-items:end;flex-wrap:nowrap}
 .map-filters label{display:flex;flex:1 1 115px;flex-direction:column;gap:4px;font-size:10px;font-weight:800;color:#507078;letter-spacing:.06em;text-transform:uppercase}
 .map-filters label:first-child{flex:1.6 1 200px}
-.map-filters input,.map-filters select{width:100%;height:37px;min-width:0;border:1px solid #d8e2df;background:#fff;border-radius:7px;color:var(--ink);font:400 13px/1.2 var(--sans);padding:0 11px}
-.map-reset{height:37px;padding:0 15px;background:#e9f2f3;color:var(--deep);border:0;border-radius:7px;font-size:12px;font-weight:800;white-space:nowrap}
-.water-map{position:relative;height:clamp(430px,62vh,600px);width:100%;background:#dfeee8}
-.map-status{position:absolute;top:15px;left:15px;z-index:500;background:#fff;border-radius:8px;border:1px solid var(--line);padding:10px 13px;color:var(--muted);font-size:12px}
-.map-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:8px 12px;background:#fff;color:#526e74;font-size:11px}
-.map-panel{min-width:0;border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
-.map-detail{padding:19px 17px 13px;overflow-y:auto;max-height:370px;flex:1 1 auto}
-.map-detail h3{font:500 26px/1.12 var(--serif);color:var(--ink);margin-bottom:10px}
+.map-filters input,.map-filters select{width:100%;height:40px;min-width:0;border:1px solid #d8e2df;background:#fff;border-radius:9px;color:var(--ink);font:400 13px/1.2 var(--sans);padding:0 11px}
+.map-reset{height:40px;padding:0 15px;background:#e9f2f3;color:var(--deep);border:0;border-radius:9px;font-size:12px;font-weight:800;white-space:nowrap}
+.water-map{position:relative;height:clamp(430px,62vh,600px);width:100%;margin-top:14px;border-radius:14px;overflow:hidden;background:#dfeee8}
+.map-status{position:absolute;inset:0;display:grid;place-items:center;z-index:500;background:rgba(255,255,255,.82);padding:16px;color:var(--muted);font-size:12px;text-align:center}
+.map-foot{display:flex;justify-content:flex-start;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 2px 0;background:#fff;color:#526e74;font-size:11px}
+.map-panel{min-width:0;border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0;padding:18px;background:#fbfcf9}
+.map-detail{padding:18px 18px 22px;background:#fff;border:1px solid #e1ece9;border-radius:16px;min-height:100%}
+.map-detail h3{font:500 clamp(28px,2.4vw,36px)/1.1 var(--serif);color:var(--ink);margin-bottom:10px}
 .map-detail p{font-size:13px;line-height:1.6;color:var(--muted)}
-.map-detail .detail-place{font-size:12px;color:var(--green);font-weight:800;margin:0 0 7px}
-.detail-row{border-top:1px solid #e8eeea;padding:8px 0}
+.map-detail .detail-place{font-size:11px;color:var(--green);font-weight:800;margin:0 0 7px;letter-spacing:.08em;text-transform:uppercase}
+.detail-fields{display:grid;gap:0;margin-top:8px}
+.detail-row{border-top:1px solid #e8eeea;padding:10px 0}
 .detail-row dt{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#547077}
 .detail-row dd{margin:3px 0 0;font-size:12px;color:#254955;line-height:1.5;overflow-wrap:anywhere}
-.detail-precision{font-size:11px!important;padding-top:8px;border-top:1px solid var(--line)}
+.map-disclaimer{font-size:11px!important;line-height:1.6!important;color:#637d83!important;margin-top:12px}
 .detail-close{float:right;border:0;background:none;font-size:19px;color:#45656b}
-.map-directory{border-top:1px solid var(--line);padding:10px 12px;flex:0 0 auto}
+.map-source{display:inline-flex;margin-top:14px;font-size:12px;font-weight:800;color:var(--deep)}
+.map-directory{margin-top:16px;padding:16px;border:1px solid #e1ece9;border-radius:16px;background:#f8fbfa}
+.map-directory-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:11px}
 .map-directory-title{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:900;color:var(--green)}
-.map-list{margin-top:6px;max-height:180px;overflow-y:auto}
-.map-list-item{width:100%;border:0;border-bottom:1px solid #edf1ef;padding:8px 3px;background:transparent;text-align:left;display:flex;justify-content:space-between;gap:9px;align-items:baseline;color:var(--ink);font-size:12px;cursor:pointer}
-.map-list-item:hover,.map-list-item[aria-current="true"]{background:#eef6f3}
-.map-list-item small{font-size:10px;color:#60777b;white-space:nowrap}
+.map-list{margin-top:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-height:220px;overflow:auto}
+.map-list-item{width:100%;border:1px solid #d9e5e1;border-radius:12px;padding:11px 12px;background:#fff;text-align:left;display:grid;gap:4px;color:var(--ink);font-size:12px;cursor:pointer}
+.map-list-item:hover,.map-list-item[aria-current="true"]{background:#eef6f3;border-color:#7ca5a5}
+.map-list-item span{font-weight:700;line-height:1.4}
+.map-list-item small{font-size:10px;color:#60777b;line-height:1.45}
+.map-empty{font-size:13px;color:#698185}
 .map-caption{text-align:center;color:#577078;font-size:11px;line-height:1.6;margin:12px auto 0;max-width:900px}
 .map-section .leaflet-container{font-family:var(--sans)}
 .map-section .leaflet-control-attribution{font-size:9px}
 
 /* Contacto exclusivamente con organizaciones territoriales. */
-.contact{position:relative;isolation:isolate;overflow:hidden;background:#153f46;color:#fff;text-align:center;padding:65px 0}
-.contact-photo{position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(0,50,55,.76),rgba(3,45,51,.79)),url('assets/brochure-contacto.webp') center/cover}
-.contact .eyebrow{color:#bfe4d2}
+.contact{position:relative;isolation:isolate;overflow:hidden;background:#153f46;color:#fff;text-align:center;padding:78px 0;min-height:460px;display:grid;align-items:center}
+.contact-photo{position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(0,43,49,.52),rgba(3,45,51,.62)),url('assets/contacto-organizaciones.jpg') center 46%/cover no-repeat;transform:scale(1.02)}
+.contact .eyebrow{color:#c6ead6}
 .contact h2{font-size:clamp(33px,3.2vw,45px);margin:5px 0 15px}
-.contact p{font-size:15px;max-width:655px;margin:0 auto 22px;line-height:1.65;color:#f3f8f7}
+.contact p{font-size:15px;max-width:700px;margin:0 auto 22px;line-height:1.65;color:#f3f8f7}
 .site-footer{background:#0d3844;color:#eaf3f0;padding:25px 0}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
 .footer-brand{display:flex;align-items:center;gap:20px;min-width:0}
@@ -179,8 +189,9 @@ button{cursor:pointer}
   .method-visual{height:145px}
   .method-title{font-size:10px}
   .method[data-method="fisicoquimico"] .method-visual img{max-width:95px}
-  .identity-photo img{height:240px}
-  .map-shell{grid-template-columns:minmax(0,1fr) 255px}
+  .identity-photo img{height:300px}
+  .map-shell{grid-template-columns:minmax(0,1fr) minmax(300px,.95fr)}
+  .map-list{grid-template-columns:1fr}
 }
 @media(max-width:780px){
   :root{--header-height:69px}
@@ -212,16 +223,18 @@ button{cursor:pointer}
   .method-popover{bottom:calc(100% + 4px)}
   .section{padding:43px 0}
   .identity-story{grid-template-columns:1fr;gap:17px}
-  .identity-photo img{height:230px}
+  .identity-copy{max-width:none}
+  .identity-photo img{height:260px}
+  .network-ribbon{min-height:200px}
   .identity-copy p{font-size:14px}
-  .stats{margin-top:20px}
+  .stats{margin-top:22px}
   .video-grid{gap:14px}
   .video-card h3{font-size:20px}
   .map-shell{grid-template-columns:1fr}
-  .map-panel{border-left:0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
-  .map-directory{border-top:0;border-left:1px solid var(--line)}
-  .map-detail{max-height:280px}
+  .map-panel{border-left:0;border-top:1px solid var(--line);padding:16px}
+  .map-detail{min-height:auto}
   .water-map{height:440px}
+  .map-list{grid-template-columns:1fr}
 }
 @media(max-width:560px){
   .container,.container-wide{width:calc(100% - 28px)}
@@ -241,8 +254,9 @@ button{cursor:pointer}
   .stats>div{padding:0 5px}
   .stats strong{font-size:33px}
   .stats span{font-size:10px}
-  .network-strip{gap:12px}
-  .network-caption{width:100%;text-align:center}
+  .network-ribbon__content{padding:22px 18px}
+  .network-logos-wrap{gap:14px 18px}
+  .network-logo{height:58px}
   .video-grid{grid-template-columns:1fr}
   .video-media{aspect-ratio:16/9}
   .video-card{margin-bottom:7px}
