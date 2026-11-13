@@ -1,21 +1,44 @@
-# Global Water Watch Chile — Web externa V15
+# Global Water Watch Chile — sitio público
 
-Sitio estático para revisión institucional de Fundación Manzana Verde y GWW Chile.
+Sitio estático institucional de Global Water Watch Chile, coordinado por Fundación Manzana Verde. Se publica mediante GitHub Pages.
 
-## Cambios de V15
-- **Mapa real en sección propia** con 14 referencias a cuerpos de agua explícitamente nombrados en el listado territorial, 10 con ubicaciones generales y 4 pendientes; NO son estaciones de monitoreo.
-- **Hero** con tubo, tarjeta y lupa; los tres títulos alineados en la misma línea inferior, sin modificar el bloque de descripción al lado opuesto.
-- **Red** con fotografía protagonista y franja de logos autorizados.
-- **Qué hacemos** con cuatro carátulas que abren videos aportados.
-- **Protección de datos:** no se incluyen nombres de agrupaciones, voluntarios, certificaciones, contactos personales ni mediciones en el mapa.
+## Estructura
 
-## Archivos clave
-- `index.html`, `styles.css`, `hero-v14.css`, `v15-adjustments.css`, `app.js`
-- `mapa.js`, `mapa.css`, `data/cuerpos-agua-publicos.geojson`
-- `docs/AGREGAR_CUERPOS_DE_AGUA_V15.md` para nuevas fichas
-- `docs/DEPURACION_REPOSITORIO_V15.md` para eliminar archivos heredados
-- `herramientas/validar_catalogo.py` para validar datos
+```text
+index.html                Estructura semántica del sitio
+styles.css                Única hoja de estilos
+js/site.js                Menú, métodos, videos y logos
+js/map.js                 Mapa público (Leaflet, OpenStreetMap, GeoJSON)
+data/cuerpos-agua.geojson Referencias territoriales públicas
+ data/videos.json         Videos incorporados en «Qué hacemos»
+ data/logos-red.json      Logos de organizaciones autorizadas
+assets/                   Fotografías e identidad gráfica utilizadas
+tools/                    Importación y validación de geometrías
+docs/                     Manual técnico y política de publicación
+```
 
-La fuente comunal contiene 34 equipos, no 34 cuerpos de agua. La capa del mapa es **preliminar**, no un registro acreditado de estaciones ni resultados. Ninguna autorización para publicar mediciones puede inferirse del documento. Los puntos son ubicaciones generales de cuerpos de agua, no lugares de muestreo.
+## Puesta en marcha
 
-Para ejecutar localmente: `python -m http.server 8000`, después abre `http://localhost:8000/`. El mapa usa Leaflet/OpenStreetMap y requiere conexión para descargar las teselas.
+El sitio utiliza archivos JSON, por lo que debe abrirse mediante un servidor HTTP (no haciendo doble clic en `index.html`).
+
+```bash
+python -m http.server 8000
+```
+
+Abrir `http://localhost:8000/` y comprobar los enlaces, el mapa y la reproducción de videos. Se requiere conexión para cargar Leaflet, teselas de OpenStreetMap y contenido YouTube.
+
+Publicar **el contenido de esta carpeta** en la raíz de la rama configurada en GitHub Pages. No subir la carpeta que lo contiene como subdirectorio.
+
+## Modelo de datos
+
+`data/cuerpos-agua.geojson` contiene referencias territoriales documentadas. **No identifica estaciones, organizaciones, personas ni resultados de monitoreo.** Los puntos son localizaciones generales y no implican delimitaciones. Los polígonos solo se muestran cuando su geometría contiene fuente y fecha.
+
+```bash
+python tools/validar_catalogo.py
+```
+
+Consultar `docs/MAPA_Y_POLIGONOS.md` antes de importar una nueva delimitación y `docs/DEPURACION.md` antes de reemplazar versiones antiguas del repositorio.
+
+## Gobierno de datos
+
+Todo lo que se incorpore a este repositorio público, incluso en JSON, `assets/` o `docs/`, puede ser descargado por terceros. Los registros de la plataforma interna se mantendrán en un sistema separado con autenticación, autorización y exportación controlada hacia la web pública.

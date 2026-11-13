@@ -1,136 +1,159 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="es-CL">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Global Water Watch Chile: monitoreo comunitario participativo de aguas y cuidado coparticipativo de cuencas. Programa coordinado por Fundación Manzana Verde." name="description"/>
-<meta content="#F2EBD5" name="theme-color"/>
-<title>GWW Chile | Conocer para cuidar · Web externa V15</title>
-<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link crossorigin="" href="https://unpkg.com" rel="preconnect"/>
-<link crossorigin="" href="https://tile.openstreetmap.org" rel="preconnect"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
-<link href="styles.css?v=15.0" rel="stylesheet"/>
-<link href="hero-v14.css?v=15.0" rel="stylesheet"/>
-<link href="mapa.css?v=15.0" rel="stylesheet"/>
-<link href="v11-sections.css?v=14.0" rel="stylesheet"/>
-<link href="v14-sections.css?v=15.0" rel="stylesheet"/>
-<link href="v15-adjustments.css?v=15.0" rel="stylesheet"/>
-<script crossorigin="" defer="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script defer="" src="mapa.js?v=15.0"></script>
-<script defer="" src="app.js?v=15.0"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Global Water Watch Chile: ciencia comunitaria, educación y monitoreo colaborativo para el cuidado de cuerpos de agua dulce.">
+  <meta name="theme-color" content="#0c3a43">
+  <title>Global Water Watch Chile · Conocer para cuidar</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/map.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#principal">Saltar al contenido</a>
-<header class="site-header" id="inicio">
-<a aria-label="GWW Chile, inicio" class="brand" href="#inicio">
-<img alt="" height="78" src="assets/logo-gww-chile.png" width="62"/>
-<span><strong>GLOBAL WATER WATCH</strong><small>CHILE · Fundación Manzana Verde</small></span>
-</a>
-<button aria-controls="nav-main" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" id="nav-toggle" type="button">☰</button>
-<nav aria-label="Navegación principal" id="nav-main"><a href="#quienes">Quiénes somos</a><a href="#red">Nuestra red</a><a href="#ciencia">Qué hacemos</a><a href="#mapa">Mapa del agua</a><a class="nav-contact" href="#contacto">Cómo sumarse</a></nav>
-</header>
-<main id="principal"><section aria-labelledby="hero-title" class="hero">
-<div aria-hidden="true" class="hero-landscape"></div>
-<div aria-hidden="true" class="hero-people"></div>
-<div aria-hidden="true" class="hero-overlay"></div>
-<div class="hero-content container">
-<p class="eyebrow hero-eyebrow">GLOBAL WATER WATCH CHILE</p>
-<h1 id="hero-title">Conocer para <em>cuidar</em></h1>
-<p class="hero-lede">Monitoreo comunitario participativo de aguas para el cuidado coparticipativo de cuencas.</p>
-<a class="hero-action" href="#mapa">Explorar el mapa <span aria-hidden="true">↗</span></a>
-</div>
-<div aria-label="Metodologías científicas de monitoreo" class="method-objects" id="metodos">
-<div aria-label="Selecciona una metodología para conocerla" class="method-objects__cluster" role="group">
-<button aria-controls="method-explainer" aria-label="Conocer monitoreo fisicoquímico" aria-pressed="false" class="method-object method-object--physical" data-method="fisicoquimico" type="button">
-<span class="method-object__visual"><img alt="" loading="eager" src="assets/metodo-tubo-azul.png"/></span><span class="method-object__label">Fisicoquímico</span>
-</button>
-<button aria-controls="method-explainer" aria-label="Conocer monitoreo bacteriológico" aria-pressed="false" class="method-object method-object--bacteria" data-method="bacteriologico" type="button">
-<span class="method-object__visual"><img alt="" loading="eager" src="assets/metodo-tarjeta-rcard.png"/></span><span class="method-object__label">Bacteriológico</span>
-</button>
-<button aria-controls="method-explainer" aria-label="Conocer biomonitoreo de macroinvertebrados" aria-pressed="false" class="method-object method-object--macro" data-method="macroinvertebrados" type="button">
-<span class="method-object__visual"><img alt="" loading="eager" src="assets/metodo-lupa-insecto.png"/></span><span class="method-object__label">Macroinvertebrados</span>
-</button>
-</div>
-</div>
-<div aria-labelledby="method-explainer-title" aria-live="polite" class="method-explainer" hidden="" id="method-explainer" role="region">
-<button aria-label="Cerrar explicación" class="method-explainer__close" id="method-explainer-close" type="button">×</button>
-<p class="method-explainer__eyebrow">Observación del agua</p>
-<h2 id="method-explainer-title"></h2>
-<p id="method-explainer-text"></p>
-</div>
-<div class="hero-serial">CIENCIA · EDUCACIÓN · TERRITORIO</div>
-</section><section aria-labelledby="identity-title" class="editorial-section identity" id="quienes">
-<div class="container">
-<div class="section-heading">
-<p class="eyebrow">IDENTIDAD Y TRAYECTORIA</p><h2 id="identity-title">Quiénes somos</h2>
-<p>Una alianza para conocer y cuidar el agua desde los propios territorios.</p>
-</div>
-<div class="identity-layout">
-<figure class="editorial-photo"><img alt="Integrantes de una jornada de monitoreo comunitario junto al agua" loading="lazy" src="assets/brochure-que-es.webp"><figcaption>Trabajo de campo · Archivo Fundación Manzana Verde</figcaption></img></figure>
-<div class="identity-text">
-<p class="copy-overline">CUIDADO COPARTICIPATIVO</p>
-<p>Global Water Watch Chile surge de la colaboración entre Fundación Manzana Verde y Global Water Watch Internacional para implementar monitoreo comunitario participativo, educación ambiental y acompañamiento a comunidades e instituciones.</p>
-<p>El programa fortalece capacidades locales para observar, interpretar y utilizar información del agua en decisiones sobre sus propios territorios.</p>
-<a class="inline-link" href="#red">Conocer la red <span aria-hidden="true">↗</span></a>
-</div>
-</div><div aria-label="Indicadores históricos de la red" class="identity-facts"><p class="identity-facts-label">TRAYECTORIA · CIFRAS HISTÓRICAS DE 2024</p><div aria-label="Indicadores históricos 2024" class="impact-stats">
-<div><strong>285</strong><span>Monitoras y monitores</span></div>
-<div><strong>15</strong><span>Jornadas de certificación</span></div>
-<div><strong>+500</strong><span>Monitoreos realizados</span></div>
-</div><p class="impact-note">Cifras referidas a 2024. No representan un contador actualizado en tiempo real.</p></div>
-</div>
-</section><section aria-labelledby="red-title" class="editorial-section network network-v14" id="red">
-<div class="container">
-<div class="section-heading"><p class="eyebrow">CUIDADO EN COMUNIDAD</p><h2 id="red-title">Nuestra red</h2><p>Organizaciones que aprenden y trabajan por el cuidado de cuerpos de agua dulce.</p></div>
-<figure class="network-documentary"><img alt="Encuentro colectivo de personas participantes del monitoreo comunitario junto a un río" loading="lazy" src="assets/brochure-equipo.webp"/><figcaption>Trabajo colectivo en territorio · Archivo GWW Chile</figcaption></figure>
-<div aria-label="Identidad institucional y logos autorizados de la red" class="network-identity-rail">
-<div class="network-identity"><img alt="Fundación Manzana Verde" src="assets/logo-manzana-verde.png"/><span>Coordinación nacional</span></div>
-<div class="network-identity"><img alt="Global Water Watch Chile" src="assets/logo-gww-chile.png"/><span>Programa en Chile</span></div>
-<div class="network-organizations-rail"><p>Organizaciones de la red</p><div aria-live="polite" class="organization-logos" id="organization-logos"></div><p class="network-pending" id="organization-pending">Sus logos aparecerán aquí cuando autoricen expresamente su difusión.</p></div>
-</div>
-</div>
-</section>
-<section aria-labelledby="science-title" class="editorial-section science" id="ciencia">
-<div class="container">
-<div class="section-heading"><p class="eyebrow">CIENCIA Y TRABAJO EN TERRENO</p><h2 id="science-title">Qué hacemos</h2><p>Acompañamos el monitoreo comunitario, la interpretación de datos y el aprendizaje colectivo.</p></div>
-<div class="science-grid">
-<article class="science-card"><div class="science-image"><img alt="Actividad de monitoreo y análisis de agua" loading="lazy" src="assets/brochure-datos.webp"/></div><div class="science-text"><span>01</span><h3>Datos confiables</h3><p>Aplicar técnicas compartidas para observar cambios en los cuerpos de agua.</p></div></article>
-<article class="science-card"><div class="science-image"><img alt="Trabajo colectivo de planificación y análisis territorial" loading="lazy" src="assets/brochure-decisiones.webp"/></div><div class="science-text"><span>02</span><h3>Decisiones informadas</h3><p>Interpretar los antecedentes para orientar acciones de cuidado de cuencas.</p></div></article>
-<article class="science-card"><div class="science-image"><img alt="Aprendizajes comunitarios y educación ambiental" loading="lazy" src="assets/brochure-aprendizaje.webp"/></div><div class="science-text"><span>03</span><h3>Aprendizaje significativo</h3><p>Aprender sobre el ciclo del agua mediante experiencias formativas compartidas.</p></div></article>
-</div>
-<div aria-label="Fotografías y videos del trabajo comunitario" class="activity-media"><div class="activity-media-intro"><img alt="Jornada comunitaria de aprendizaje y cuidado del agua" loading="lazy" src="assets/gww-p11-80.webp"><div class="activity-media-copy"><p class="eyebrow">EN IMÁGENES</p><p>Explora registros audiovisuales del trabajo comunitario. Selecciona una portada para reproducir el video.</p></div></div><div aria-label="Archivo audiovisual" class="video-grid" id="video-grid"></div><p class="video-note">Antes de la publicación definitiva, confirmar títulos, años, créditos y permisos de inserción de cada video.</p></div></div>
-</section><section aria-labelledby="gwwm-title" class="gwwm-section" id="mapa">
-<div class="gwwm-container">
-<header class="gwwm-heading"><p class="gwwm-kicker">CARTOGRAFÍA COLABORATIVA</p><h2 id="gwwm-title">Mapa del agua</h2><p>Explora cuerpos de agua mencionados en la caracterización territorial. Las referencias están en revisión y no representan estaciones de monitoreo.</p></header>
-<div class="gwwm-explorer">
-<div class="gwwm-map-column">
-<div class="gwwm-controls">
-<label class="gwwm-field">Buscar<input autocomplete="off" id="gwwm-search" placeholder="Río, lago, laguna o comuna" type="search"/></label>
-<label class="gwwm-field">Región<select id="gwwm-region"><option value="">Todas las regiones</option></select></label>
-<label class="gwwm-field">Tipo<select id="gwwm-kind"><option value="">Todos los tipos</option></select></label>
-<button class="gwwm-reset" id="gwwm-reset" type="button">Ver Chile</button>
-</div>
-<div aria-label="Mapa interactivo geográfico de Chile" class="gwwm-map" id="gwwm-map" role="region"><div class="gwwm-status" id="gwwm-status" role="status">Cargando cartografía…</div></div>
-<div class="gwwm-meta"><span id="gwwm-count">Cargando información pública…</span><span>Sin ubicaciones de muestreo reservadas</span></div>
-</div>
-<div class="gwwm-side"><aside aria-label="Ficha pública del cuerpo de agua" aria-live="polite" class="gwwm-detail" id="gwwm-detail">
-<p class="gwwm-detail-eyebrow">INFORMACIÓN TERRITORIAL</p>
-<h3>Selecciona un cuerpo de agua</h3>
-<p>Selecciona un punto o un nombre de la lista para ver su referencia territorial.</p>
-<p class="gwwm-note">La presencia en el mapa no equivale a una evaluación de calidad del agua.</p>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Global Water Watch Chile, volver al inicio">
+      <img src="assets/logo-gww-chile.png" alt="" width="68" height="70">
+      <span><strong>GLOBAL WATER WATCH</strong><small>CHILE · Fundación Manzana Verde</small></span>
+    </a>
+    <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#ciencia">Qué hacemos</a>
+      <a href="#mapa">Mapa del agua</a>
+      <a class="nav-contact" href="#contacto">Cómo sumarse</a>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-landscape" aria-hidden="true"></div>
+      <div class="hero-people" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner container">
+        <div class="hero-message">
+          <p class="hero-kicker">Global Water Watch Chile</p>
+          <h1 id="hero-title">Conocer para <em>cuidar</em></h1>
+          <p>Monitoreo comunitario y conocimiento compartido para cuidar las aguas dulces de Chile.</p>
+          <a class="pill-link" href="#mapa">Explorar el mapa <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="methods" aria-label="Explora los tres métodos de monitoreo">
+          <div class="method" data-method="fisicoquimico">
+            <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-fisicoquimico" aria-label="Conocer el monitoreo fisicoquímico">
+              <span class="method-visual"><img src="assets/metodo-tubo-azul.png" alt="" width="128" height="200"></span>
+              <span class="method-title">Fisicoquímico <span class="method-plus" aria-hidden="true">+</span></span>
+            </button>
+            <div id="detail-fisicoquimico" class="method-popover" hidden>
+              <button class="method-close" type="button" aria-label="Cerrar explicación">×</button>
+              <strong>Fisicoquímico</strong>
+              <p>Observa pH, temperatura, turbidez, oxígeno disuelto, alcalinidad y dureza del agua mediante instrumentos de campo.</p>
+            </div>
+          </div>
+          <div class="method" data-method="bacteriologico">
+            <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-bacteriologico" aria-label="Conocer el monitoreo bacteriológico">
+              <span class="method-visual"><img src="assets/metodo-tarjeta-rcard.png" alt="" width="154" height="195"></span>
+              <span class="method-title">Bacteriológico <span class="method-plus" aria-hidden="true">+</span></span>
+            </button>
+            <div id="detail-bacteriologico" class="method-popover" hidden>
+              <button class="method-close" type="button" aria-label="Cerrar explicación">×</button>
+              <strong>Bacteriológico</strong>
+              <p>Utiliza tarjetas de cultivo R-CARD para observar bacterias indicadoras, siguiendo protocolos de incubación y lectura.</p>
+            </div>
+          </div>
+          <div class="method" data-method="macroinvertebrados">
+            <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-macroinvertebrados" aria-label="Conocer el biomonitoreo de macroinvertebrados">
+              <span class="method-visual"><img src="assets/metodo-lupa-insecto.png" alt="" width="154" height="195"></span>
+              <span class="method-title">Macroinvertebrados <span class="method-plus" aria-hidden="true">+</span></span>
+            </button>
+            <div id="detail-macroinvertebrados" class="method-popover" hidden>
+              <button class="method-close" type="button" aria-label="Cerrar explicación">×</button>
+              <strong>Macroinvertebrados</strong>
+              <p>Identifica organismos acuáticos y su sensibilidad a cambios del entorno para interpretar condiciones ecológicas.</p>
+            </div>
+          </div>
+          <p class="methods-hint"><span aria-hidden="true">✳</span> Selecciona un método</p>
+        </div>
+      </div>
+    </section>
 
-</aside><div aria-label="Listado de cuerpos de agua" class="gwwm-index" id="gwwm-index"></div></div>
-</div>
-<p class="gwwm-footer-note">Mapa preliminar de referencias a cuerpos de agua contenidas en un listado comunal. Los puntos representan ubicaciones geográficas generales, nunca estaciones GWW. No se incluyen agrupaciones, datos personales ni resultados de monitoreo. Validación institucional pendiente.</p>
-</div>
-</section><section aria-labelledby="contact-title" class="contact-section" id="contacto">
-<div aria-hidden="true" class="contact-image"></div>
-<div aria-hidden="true" class="contact-wash"></div>
-<div class="container contact-inner"><p class="eyebrow">ORGANIZACIONES TERRITORIALES</p><h2 id="contact-title">Cómo sumarse</h2><p>¿Su organización busca cuidar un río, lago, laguna o humedal? Escríbannos para conocer las metodologías de monitoreo y conversar sobre posibles formas de colaboración territorial.</p><a class="contact-button" href="mailto:fundacionmanzanaverde@gmail.com?subject=Consulta%20de%20organizaci%C3%B3n%20territorial%20%7C%20GWW%20Chile">Contactar a GWW Chile <span aria-hidden="true">↗</span></a></div>
-</section></main>
-<footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><img alt="Logo Global Water Watch Chile" src="assets/logo-gww-chile.png"><div class="footer-brand-copy"><strong>Global Water Watch Chile</strong><small>Coordinación: Fundación Manzana Verde</small><p class="footer-brand-note">Monitoreo comunitario participativo de aguas y cuidado coparticipativo de cuencas.</p></div></img></div><div class="footer-social"><p class="footer-social-title">Redes y contacto</p><a class="footer-social-link" href="https://www.instagram.com/fundacionmanzanaverde/" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="footer-social-icon">◎</span><span><strong>Instagram</strong><small>@fundacionmanzanaverde</small></span></a><a class="footer-social-link" href="mailto:fundacionmanzanaverde@gmail.com"><span aria-hidden="true" class="footer-social-icon">✉</span><span><strong>Correo</strong><small>fundacionmanzanaverde@gmail.com</small></span></a><div class="footer-links"><a href="https://www.fundacionmanzanaverde.cl/" rel="noopener noreferrer" target="_blank">Fundación Manzana Verde</a><a href="#contacto">Cómo sumarse</a><a href="#inicio">Volver arriba ↑</a></div></div><p class="footer-version">Web externa V15 · Prototipo institucional y cartográfico · Sin mediciones autorizadas publicadas</p></div></footer>
-<dialog aria-labelledby="video-dialog-title" class="video-dialog" id="video-dialog"><div class="video-dialog-header"><h2 id="video-dialog-title">Memoria audiovisual</h2><button aria-label="Cerrar video" id="video-close" type="button">×</button></div><div class="video-player" id="video-player"></div></dialog>
+    <section class="identity section" id="quienes" aria-labelledby="identity-heading">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Comunidad y ciencia</span><h2 id="identity-heading">Quiénes somos</h2></div>
+        <div class="identity-story">
+          <figure class="identity-photo"><img src="assets/brochure-que-es.webp" alt="Actividad comunitaria de monitoreo en terreno" loading="lazy"></figure>
+          <div class="identity-copy">
+            <p>Global Water Watch Chile es una red de monitoreo comunitario que vincula el cuidado territorial del agua con métodos compartidos y formación científica.</p>
+            <p>El programa es coordinado por <strong>Fundación Manzana Verde</strong>, en colaboración con Global Water Watch Internacional y organizaciones territoriales de Chile.</p>
+          </div>
+        </div>
+        <div class="stats" aria-label="Cifras históricas de 2024">
+          <div><strong>285</strong><span>Monitoras y monitores formados</span></div>
+          <div><strong>15</strong><span>Jornadas de certificación</span></div>
+          <div><strong>+500</strong><span>Monitoreos reportados</span></div>
+          <p>Memoria institucional 2024</p>
+        </div>
+        <div class="network-strip" aria-label="Red de colaboración">
+          <span class="network-caption">Nuestra red</span>
+          <img src="assets/logo-manzana-verde.png" alt="Fundación Manzana Verde" class="network-logo" loading="lazy">
+          <img src="assets/logo-gww-chile.png" alt="Global Water Watch Chile" class="network-logo" loading="lazy">
+          <div id="organization-logos" class="organization-logos" aria-label="Organizaciones con logo autorizado"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="science section" id="ciencia" aria-labelledby="science-heading">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Ciencia y territorio</span><h2 id="science-heading">Qué hacemos</h2><p>Observamos el agua, compartimos conocimientos y fortalecemos el trabajo comunitario.</p></div>
+        <div class="video-grid" id="video-grid" aria-label="Experiencias audiovisuales"></div>
+      </div>
+    </section>
+
+    <section class="map-section section" id="mapa" aria-labelledby="map-heading">
+      <div class="container-wide">
+        <div class="section-head"><span class="eyebrow">Cartografía colaborativa</span><h2 id="map-heading">Mapa del agua</h2><p>Explora cuerpos de agua y sus antecedentes territoriales.</p></div>
+        <div class="map-shell">
+          <div class="map-main">
+            <div class="map-filters">
+              <label><span>Buscar</span><input id="map-search" type="search" placeholder="Nombre o comuna" autocomplete="off"></label>
+              <label><span>Región</span><select id="map-region"><option value="">Todas</option></select></label>
+              <label><span>Tipo</span><select id="map-type"><option value="">Todos</option></select></label>
+              <button type="button" class="map-reset" id="map-reset">Ver Chile</button>
+            </div>
+            <div id="water-map" class="water-map" role="region" aria-label="Mapa interactivo de cuerpos de agua de Chile">
+              <p class="map-status" id="map-status" role="status">Cargando mapa…</p>
+            </div>
+            <div class="map-foot"><span id="map-count">Cargando cuerpos de agua…</span><span>Ubicaciones generales, no estaciones</span></div>
+          </div>
+          <aside class="map-panel" aria-label="Información del cuerpo de agua">
+            <div id="map-detail" class="map-detail" aria-live="polite">
+              <h3>Explora el territorio</h3><p>Selecciona un cuerpo de agua en el mapa o en la lista para conocer sus características.</p>
+            </div>
+            <div class="map-directory"><span class="map-directory-title">Cuerpos de agua</span><div id="map-list" class="map-list"></div></div>
+          </aside>
+        </div>
+        <p class="map-caption">Las referencias territoriales no equivalen a estaciones de muestreo ni a evaluaciones de calidad del agua. Las delimitaciones se muestran únicamente cuando existe cartografía respaldada.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contacto" aria-labelledby="contact-heading">
+      <div class="contact-photo" aria-hidden="true"></div>
+      <div class="container contact-inner">
+        <span class="eyebrow">Colaboración territorial</span>
+        <h2 id="contact-heading">Cómo sumarse</h2>
+        <p>Si tu organización busca conocer y proteger un río, lago, laguna o humedal, conversemos sobre el monitoreo comunitario y las formas de colaboración.</p>
+        <a class="pill-link" href="mailto:fundacionmanzanaverde@gmail.com?subject=Organizaci%C3%B3n%20territorial%20-%20GWW%20Chile">Escríbenos <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><img src="assets/logo-gww-chile.png" alt="Global Water Watch Chile"><span>Coordinación<br><strong>Fundación Manzana Verde</strong></span></div>
+      <div class="footer-social"><strong>Redes y contacto</strong><a href="https://www.instagram.com/fundacionmanzanaverde/" target="_blank" rel="noopener noreferrer">Instagram · @fundacionmanzanaverde</a><a href="mailto:fundacionmanzanaverde@gmail.com">Correo electrónico</a><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" class="footer-license">Cartografía · OpenStreetMap</a></div>
+    </div>
+  </footer>
 </body>
 </html>
