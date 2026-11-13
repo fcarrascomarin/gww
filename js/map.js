@@ -72,8 +72,8 @@
     currentFeatureId = null;
     elements.detail.replaceChildren(
       node('h3', '', 'Explora el territorio'),
-      node('p', '', 'Selecciona un cuerpo de agua en el mapa o en la lista para conocer sus antecedentes públicos.'),
-      node('p', 'map-disclaimer', 'Los puntos son referencias geográficas generales, no estaciones de muestreo.')
+      node('p', '', 'Selecciona un cuerpo de agua en el mapa o en el listado para conocer sus antecedentes públicos.'),
+      node('p', 'map-disclaimer', 'Las referencias visibles son territoriales y no equivalen a estaciones de muestreo.')
     );
     elements.list.querySelectorAll('.map-list-item').forEach(button => button.removeAttribute('aria-current'));
   }
@@ -103,12 +103,12 @@
     field(fields, 'Usos consignados', props.usos_humanos);
     field(fields, 'Métodos documentados en este cuerpo de agua', props.metodos_publicos);
     field(fields, 'Ubicación publicada', feature.geometry ?
-      (props.precision_publica || 'Geometría referencial') : 'Pendiente de georreferenciación');
+      (props.precision_publica || 'Geometría referencial') : 'Referencia general sin geometría publicada');
     field(fields, 'Fuente del antecedente', props.fuente_documental);
     elements.detail.append(fields);
 
     elements.detail.append(node('p', 'map-disclaimer',
-      'Referencia documental preliminar. No acredita estación GWW, monitoreo activo, resultados científicos ni estado de conservación.'));
+      'La ficha reúne antecedentes públicos de carácter territorial. No representa resultados de monitoreo ni una certificación del estado del cuerpo de agua.'));
     if (typeof props.fuente_cartografica === 'string' && /^https:\/\//i.test(props.fuente_cartografica)) {
       const link = node('a', 'map-source', 'Consultar fuente cartográfica ↗');
       link.href = props.fuente_cartografica;
@@ -166,7 +166,7 @@
       button.type = 'button';
       button.dataset.featureId = feature.id;
       const place = node('span', '', feature.properties.nombre);
-      const state = node('small', '', feature.geometry ? 'Ver en mapa' : 'Sin ubicación');
+      const state = node('small', '', [feature.properties.comuna, feature.properties.region].filter(Boolean).join(' · ') || valueText(feature.properties.tipo));
       button.append(place, state);
       if (currentFeatureId === feature.id) button.setAttribute('aria-current', 'true');
       button.addEventListener('click', () => selectFeature(feature));
@@ -204,8 +204,7 @@
         overlays.addLayer(layer);
       }
     }
-    const locatedCount = visible.filter(feature => feature.geometry).length;
-    text(elements.count, `${visible.length} cuerpos de agua · ${locatedCount} ubicados · ${visible.length - locatedCount} por ubicar`);
+    text(elements.count, `${visible.length} cuerpos de agua en esta vista`);
     if (currentFeatureId && !visible.some(feature => feature.id === currentFeatureId)) resetDetail();
     refreshList();
   }
