@@ -1,24 +1,21 @@
-# GWW Chile — Web pública V14
+# Global Water Watch Chile — Web externa V15
 
-Sitio estático GitHub Pages, con hero rediseñado, objetos científicos interactivos, fotografía documental y sección de videos, mapa de Leaflet y cartografía OpenStreetMap.
+Sitio estático para revisión institucional de Fundación Manzana Verde y GWW Chile.
 
-## Estructura visible
+## Cambios de V15
+- **Mapa real en sección propia** con 14 referencias a cuerpos de agua explícitamente nombrados en el listado territorial, 10 con ubicaciones generales y 4 pendientes; NO son estaciones de monitoreo.
+- **Hero** con tubo, tarjeta y lupa; los tres títulos alineados en la misma línea inferior, sin modificar el bloque de descripción al lado opuesto.
+- **Red** con fotografía protagonista y franja de logos autorizados.
+- **Qué hacemos** con cuatro carátulas que abren videos aportados.
+- **Protección de datos:** no se incluyen nombres de agrupaciones, voluntarios, certificaciones, contactos personales ni mediciones en el mapa.
 
-Hero, Quiénes somos, Nuestra red, Qué hacemos (videos), Mapa del agua y Cómo sumarse.
+## Archivos clave
+- `index.html`, `styles.css`, `hero-v14.css`, `v15-adjustments.css`, `app.js`
+- `mapa.js`, `mapa.css`, `data/cuerpos-agua-publicos.geojson`
+- `docs/AGREGAR_CUERPOS_DE_AGUA_V15.md` para nuevas fichas
+- `docs/DEPURACION_REPOSITORIO_V15.md` para eliminar archivos heredados
+- `herramientas/validar_catalogo.py` para validar datos
 
-## Instrucciones prioritarias
+La fuente comunal contiene 34 equipos, no 34 cuerpos de agua. La capa del mapa es **preliminar**, no un registro acreditado de estaciones ni resultados. Ninguna autorización para publicar mediciones puede inferirse del documento. Los puntos son ubicaciones generales de cuerpos de agua, no lugares de muestreo.
 
-- `docs/CAMBIOS_V14.md`: descripción de las mejoras.
-- `docs/INSTALACION_Y_REVISION_V14.md`: cómo reemplazar toda la web sin mezclar versiones.
-- `docs/AGREGAR_CUERPOS_DE_AGUA.md`: procedimiento detallado para altas en el mapa.
-- `ejemplos/FICHA_PUBLICA_MODELO.json`: ejemplo no publicable, sin coordenadas reales.
-- `herramientas/validar_catalogo.py`: validación estructural del catálogo antes de publicarlo.
-- `data/cuerpos-agua-publicos.geojson`: única capa de fichas públicas autorizadas; vacía por defecto.
-- `data/videos.json`: enlaces y portadas editoriales de los cuatro videos compartidos.
-- `data/logos-red.json`: agrupaciones con autorización expresa de uso de logo.
-
-**NUNCA guardar datos internos en GitHub Pages.** El sistema interno de perfiles, certificaciones y mediciones deberá utilizar un backend privado con control de acceso, y exportar solamente las fichas previamente revisadas y autorizadas.
-
-## Publicación
-
-Descomprime la totalidad del paquete en la raíz del repositorio y realiza commit + push mediante GitHub Desktop. Comprueba en el footer que indique `Web externa V14`, y en la página que los objetos, videos y mapa aparezcan según lo previsto.
+Para ejecutar localmente: `python -m http.server 8000`, después abre `http://localhost:8000/`. El mapa usa Leaflet/OpenStreetMap y requiere conexión para descargar las teselas.
