@@ -10,11 +10,12 @@ styles.css                Única hoja de estilos
 js/site.js                Menú, métodos, videos y logos
 js/map.js                 Mapa público (Leaflet, OpenStreetMap, GeoJSON)
 data/cuerpos-agua.geojson Referencias territoriales públicas
- data/videos.json         Videos incorporados en «Qué hacemos»
- data/logos-red.json      Logos de organizaciones autorizadas
+data/videos.json         Videos incorporados en «Qué hacemos»
+data/logos-red.json      Logos de organizaciones autorizadas
 assets/                   Fotografías e identidad gráfica utilizadas
 tools/                    Importación y validación de geometrías
-docs/                     Manual técnico y política de publicación
+docs/                     Guía técnica y política de publicación
+tests/                    Pruebas de integridad del sitio
 ```
 
 ## Puesta en marcha
@@ -42,3 +43,12 @@ Consultar `docs/MAPA_Y_POLIGONOS.md` antes de importar una nueva delimitación y
 ## Gobierno de datos
 
 Todo lo que se incorpore a este repositorio público, incluso en JSON, `assets/` o `docs/`, puede ser descargado por terceros. Los registros de la plataforma interna se mantendrán en un sistema separado con autenticación, autorización y exportación controlada hacia la web pública.
+
+## Comprobación rápida
+
+```bash
+python tools/validar_catalogo.py
+python -m unittest discover -s tests -v
+```
+
+La guía de diagnóstico y mantenimiento está en `docs/MAPA_PUBLICO.md`.
