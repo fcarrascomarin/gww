@@ -1,22 +1,20 @@
 [
   {
     "id": "xzONcU-ifWU",
-    "label": "Registro audiovisual 01",
+    "titulo": "Datos confiables",
+    "descripcion": "Observaciones sistemáticas para comprender el agua.",
     "poster": "assets/brochure-terreno.webp"
   },
   {
     "id": "O1_sjzFpfEQ",
-    "label": "Registro audiovisual 02",
+    "titulo": "Decisiones informadas",
+    "descripcion": "Información compartida para orientar el cuidado territorial.",
     "poster": "assets/brochure-educacion.webp"
   },
   {
     "id": "65gruzIz8HA",
-    "label": "Registro audiovisual 03",
-    "poster": "assets/brochure-equipo.webp"
-  },
-  {
-    "id": "-by1LHLd_xo",
-    "label": "Registro audiovisual 04",
+    "titulo": "Aprendizaje significativo",
+    "descripcion": "Ciencia y experiencia construidas en comunidad.",
     "poster": "assets/gww-p11-80.webp"
   }
 ]
