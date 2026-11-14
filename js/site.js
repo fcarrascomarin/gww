@@ -40,7 +40,6 @@
       trigger.setAttribute('aria-expanded', String(willOpen));
       detail.hidden = !willOpen;
     });
-    item.querySelector('.method-close').addEventListener('click', () => closeMethods(true));
   }
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeMethods(true);

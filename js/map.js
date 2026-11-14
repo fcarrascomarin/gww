@@ -20,7 +20,10 @@
     list: document.getElementById('map-list')
   };
 
-  const baseView = {center: [-37.3, -71.6], zoom: 4};
+  const baseView = {center: [-36.91, -73.03], zoom: 9};
+  const nationalView = {center: [-37.3, -71.6], zoom: 4};
+  const defaultRegion = 'Biobío';
+  const defaultFeatureId = 'humedal-los-boldos';
   const colors = {point: '#2484BF', fill: '#68A5DD', boundary: '#66824F'};
   const permittedGeometries = new Set(['Point', 'LineString', 'MultiLineString', 'Polygon', 'MultiPolygon']);
 
@@ -70,11 +73,8 @@
 
   function resetDetail() {
     currentFeatureId = null;
-    elements.detail.replaceChildren(
-      node('h3', '', 'Explora el territorio'),
-      node('p', '', 'Selecciona un cuerpo de agua en el mapa o en el listado para conocer sus antecedentes públicos.'),
-      node('p', 'map-disclaimer', 'Las referencias visibles son territoriales y no equivalen a estaciones de muestreo.')
-    );
+    elements.detail.hidden = true;
+    elements.detail.replaceChildren();
     elements.list.querySelectorAll('.map-list-item').forEach(button => button.removeAttribute('aria-current'));
   }
 
@@ -87,24 +87,25 @@
   function showDetail(feature) {
     currentFeatureId = feature.id;
     const props = feature.properties;
+    elements.detail.hidden = false;
     elements.detail.replaceChildren();
-    const close = node('button', 'detail-close', 'Cerrar ficha');
+    elements.detail.scrollTop = 0;
+    const close = node('button', 'detail-close', '×');
+    close.setAttribute('aria-label', 'Cerrar caracterización');
     close.type = 'button';
     close.addEventListener('click', resetDetail);
-    elements.detail.append(close);
-    elements.detail.append(node('p', 'detail-place', [props.comuna, props.region].filter(Boolean).join(' · ')));
-    elements.detail.append(node('h3', '', props.nombre));
-
+    const heading = node('div', 'map-detail-header');
+    heading.append(close);
+    heading.append(node('p', 'detail-place', [props.comuna, props.region].filter(Boolean).join(' · ')));
+    heading.append(node('h3', '', props.nombre));
+    elements.detail.append(heading);
     const fields = node('dl', 'detail-fields');
     field(fields, 'Tipo', props.tipo);
-    field(fields, 'Cuenca', props.cuenca);
-    field(fields, 'Preocupaciones ambientales del contexto comunal', props.preocupacion_ambiental);
-    field(fields, 'Referencias de protección y normativa', props.area_protegida);
-    field(fields, 'Usos consignados', props.usos_humanos);
-    field(fields, 'Métodos documentados en este cuerpo de agua', props.metodos_publicos);
-    field(fields, 'Ubicación publicada', feature.geometry ?
-      (props.precision_publica || 'Geometría referencial') : 'Referencia general sin geometría publicada');
-    field(fields, 'Fuente del antecedente', props.fuente_documental);
+    if (props.cuenca && !props.cuenca.startsWith('No especificada')) field(fields, 'Cuenca', props.cuenca);
+    if (Array.isArray(props.preocupacion_ambiental) && props.preocupacion_ambiental.length) field(fields, 'Contexto ambiental', props.preocupacion_ambiental);
+    if (Array.isArray(props.area_protegida) && props.area_protegida.length) field(fields, 'Protección territorial', props.area_protegida);
+    if (Array.isArray(props.usos_humanos) && props.usos_humanos.length) field(fields, 'Usos del agua y entorno', props.usos_humanos);
+    if (Array.isArray(props.metodos_publicos) && props.metodos_publicos.length) field(fields, 'Métodos documentados', props.metodos_publicos);
     elements.detail.append(fields);
 
     elements.detail.append(node('p', 'map-disclaimer',
@@ -140,9 +141,7 @@
   function selectFeature(feature) {
     showDetail(feature);
     zoomToFeature(feature);
-    if (window.matchMedia('(max-width: 800px)').matches) {
-      elements.detail.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-    }
+
   }
 
   function populateOptions(select, items) {
@@ -206,6 +205,10 @@
     }
     text(elements.count, `${visible.length} cuerpos de agua en esta vista`);
     if (currentFeatureId && !visible.some(feature => feature.id === currentFeatureId)) resetDetail();
+    if (!currentFeatureId && visible.length) {
+      const preferred = visible.find(feature => feature.id === defaultFeatureId) || visible.find(feature => feature.geometry) || visible[0];
+      showDetail(preferred);
+    }
     refreshList();
   }
 
@@ -215,14 +218,16 @@
       return;
     }
     try {
-      map = L.map(root, {scrollWheelZoom: false, zoomControl: true}).setView(baseView.center, baseView.zoom);
+      map = L.map(root, {scrollWheelZoom: true, wheelDebounceTime: 70, wheelPxPerZoomLevel: 100, zoomControl: true}).setView(baseView.center, baseView.zoom);
+      L.DomEvent.disableScrollPropagation(elements.detail);
+      L.DomEvent.disableClickPropagation(elements.detail);
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         minZoom: 3, maxZoom: 18,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>'
       }).addTo(map);
       overlays = L.featureGroup().addTo(map);
       status('');
-      // Leaflet necesita recalcular el tamaño al llegar a una sección fuera de la vista inicial.
+      // Recalcular el tamaño cuando el mapa comienza fuera del área visible.
       requestAnimationFrame(() => map.invalidateSize());
     } catch (error) {
       console.error('Mapa GWW: fallo al crear el mapa', error);
@@ -249,10 +254,11 @@
         elements.region.value = '';
         elements.type.value = '';
         resetDetail();
-        if (map) map.setView(baseView.center, baseView.zoom);
         redraw();
+        if (map) map.setView(nationalView.center, nationalView.zoom);
       });
       initializeMap();
+      if ([...elements.region.options].some(option => option.value === defaultRegion)) elements.region.value = defaultRegion;
       redraw();
       if (!features.length) status('No hay cuerpos de agua públicos disponibles en el catálogo.');
     } catch (error) {
