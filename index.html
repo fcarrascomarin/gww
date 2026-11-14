@@ -9,10 +9,10 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=20261113">
+  <link rel="stylesheet" href="styles.css?v=gww-institucional-20261114b">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="js/site.js?v=20261113" defer></script>
-  <script src="js/map.js?v=20261113" defer></script>
+  <script src="js/site.js?v=gww-institucional-20261114b" defer></script>
+  <script src="js/map.js?v=gww-institucional-20261114b" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -44,38 +44,35 @@
         <div class="methods" aria-label="Explora los tres métodos de monitoreo">
           <div class="method" data-method="fisicoquimico">
             <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-fisicoquimico" aria-label="Conocer el monitoreo fisicoquímico">
-              <span class="method-visual"><img src="assets/metodo-tubo-azul.png" alt="" width="128" height="200"></span>
-              <span class="method-title">Fisicoquímico <span class="method-plus" aria-hidden="true">+</span></span>
+              <span class="method-visual"><img src="assets/metodo-tubo-azul.png" alt="" width="128" height="200"><span class="method-symbol" aria-hidden="true">+</span></span>
+              <span class="method-title">Fisicoquímico </span>
             </button>
             <div id="detail-fisicoquimico" class="method-popover" hidden>
-              <button class="method-close" type="button" aria-label="Cerrar explicación">×</button>
               <strong>Fisicoquímico</strong>
               <p>Observa pH, temperatura, turbidez, oxígeno disuelto, alcalinidad y dureza del agua mediante instrumentos de campo.</p>
             </div>
           </div>
           <div class="method" data-method="bacteriologico">
             <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-bacteriologico" aria-label="Conocer el monitoreo bacteriológico">
-              <span class="method-visual"><img src="assets/metodo-tarjeta-rcard.png" alt="" width="154" height="195"></span>
-              <span class="method-title">Bacteriológico <span class="method-plus" aria-hidden="true">+</span></span>
+              <span class="method-visual"><img src="assets/metodo-tarjeta-rcard.png" alt="" width="154" height="195"><span class="method-symbol" aria-hidden="true">+</span></span>
+              <span class="method-title">Bacteriológico </span>
             </button>
             <div id="detail-bacteriologico" class="method-popover" hidden>
-              <button class="method-close" type="button" aria-label="Cerrar explicación">×</button>
               <strong>Bacteriológico</strong>
               <p>Utiliza tarjetas de cultivo R-CARD para observar bacterias indicadoras, siguiendo protocolos de incubación y lectura.</p>
             </div>
           </div>
           <div class="method" data-method="macroinvertebrados">
             <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-macroinvertebrados" aria-label="Conocer el biomonitoreo de macroinvertebrados">
-              <span class="method-visual"><img src="assets/metodo-lupa-insecto.png" alt="" width="154" height="195"></span>
-              <span class="method-title">Macroinvertebrados <span class="method-plus" aria-hidden="true">+</span></span>
+              <span class="method-visual"><img src="assets/metodo-lupa-insecto.png" alt="" width="154" height="195"><span class="method-symbol" aria-hidden="true">+</span></span>
+              <span class="method-title">Macroinvertebrados </span>
             </button>
             <div id="detail-macroinvertebrados" class="method-popover" hidden>
-              <button class="method-close" type="button" aria-label="Cerrar explicación">×</button>
               <strong>Macroinvertebrados</strong>
               <p>Identifica organismos acuáticos y su sensibilidad a cambios del entorno para interpretar condiciones ecológicas.</p>
             </div>
           </div>
-          <p class="methods-hint"><span aria-hidden="true">✳</span> Selecciona un método</p>
+          
         </div>
       </div>
     </section>
@@ -84,17 +81,22 @@
       <div class="container">
         <div class="section-head"><span class="eyebrow">Comunidad y ciencia</span><h2 id="identity-heading">Quiénes somos</h2></div>
         <div class="identity-story">
-          <div class="identity-copy">
-            <p>Global Water Watch Chile es una red de monitoreo comunitario que vincula el cuidado territorial del agua con métodos compartidos, aprendizaje científico y trabajo colaborativo entre organizaciones.</p>
-            <p>El programa es coordinado por <strong>Fundación Manzana Verde</strong> en articulación con Global Water Watch y agrupaciones territoriales que protegen ríos, lagos, lagunas y humedales en distintos lugares de Chile.</p>
+          <div class="identity-visual">
+            <img class="identity-photo-main" src="assets/quienes-somos-bosque.jpg" alt="Personas compartiendo conocimientos en un encuentro de monitoreo en bosque nativo" loading="lazy">
+            <img class="identity-photo-inset" src="assets/brochure-terreno.webp" alt="Actividad práctica de observación del agua" loading="lazy">
           </div>
-          <figure class="identity-photo"><img src="assets/quienes-somos-bosque.jpg" alt="Encuentro de monitoreo comunitario en bosque nativo" loading="lazy"></figure>
+          <div class="identity-copy">
+            <span class="identity-overline">El agua conecta territorios</span>
+            <p class="identity-statement">Una red que <em>observa</em>, aprende y cuida.</p>
+            <p>Global Water Watch Chile reúne organizaciones que monitorean ríos, lagunas, lagos y humedales mediante metodologías científicas compartidas.</p>
+            <p>Fundación Manzana Verde coordina este trabajo con comunidades que generan conocimiento desde sus propios territorios.</p>
+            <p class="identity-signature">Ciencia comunitaria · Formación · Colaboración</p>
+          </div>
         </div>
         <div class="network-ribbon" aria-label="Red de colaboración">
-          <div class="network-ribbon__backdrop" aria-hidden="true"></div>
           <div class="network-ribbon__content">
             <span class="network-caption">Nuestra red</span>
-            <p class="network-text">Una red que comparte metodologías, formación y colaboración territorial para cuidar las aguas dulces desde las comunidades.</p>
+            <p class="network-text">Organizaciones que comparten herramientas y conocimiento para cuidar las aguas dulces.</p>
             <div class="network-logos-wrap">
               <img src="assets/logo-manzana-verde.png" alt="Fundación Manzana Verde" class="network-logo" loading="lazy">
               <img src="assets/logo-gww-chile.png" alt="Global Water Watch Chile" class="network-logo" loading="lazy">
@@ -123,30 +125,34 @@
         <div class="section-head"><span class="eyebrow">Cartografía colaborativa</span><h2 id="map-heading">Mapa del agua</h2><p>Explora cuerpos de agua y sus antecedentes territoriales.</p></div>
         <div class="map-shell">
           <div class="map-main">
-            <div class="map-filters">
-              <label><span>Buscar</span><input id="map-search" type="search" placeholder="Nombre o comuna" autocomplete="off"></label>
-              <label><span>Región</span><select id="map-region"><option value="">Todas</option></select></label>
-              <label><span>Tipo</span><select id="map-type"><option value="">Todos</option></select></label>
-              <button type="button" class="map-reset" id="map-reset">Ver Chile</button>
-            </div>
-            <div id="water-map" class="water-map" role="region" aria-label="Mapa interactivo de cuerpos de agua de Chile">
+            <div id="water-map" class="water-map" role="region" aria-label="Mapa interactivo de cuerpos de agua de Chile" tabindex="0">
               <p class="map-status" id="map-status" role="status">Cargando mapa…</p>
+              <article id="map-detail" class="map-detail" aria-label="Caracterización del cuerpo de agua" aria-live="polite" hidden></article>
             </div>
-            <div class="map-foot"><span id="map-count">Cargando cuerpos de agua…</span></div>
+          </div>
+          <aside class="map-sidebar" aria-label="Buscar y seleccionar cuerpos de agua">
+            <div class="map-sidebar-intro">
+              <span class="eyebrow">Explora el territorio</span>
+              <h3>Encuentra un cuerpo de agua</h3>
+              <p>Filtra por zona o selecciona un lugar para ver su caracterización sobre el mapa.</p>
+            </div>
+            <div class="map-filters">
+              <label><span>Nombre o comuna</span><input id="map-search" type="search" placeholder="Buscar cuerpo de agua" autocomplete="off"></label>
+              <div class="map-filter-row">
+                <label><span>Región</span><select id="map-region"><option value="">Todas</option></select></label>
+                <label><span>Tipo</span><select id="map-type"><option value="">Todos</option></select></label>
+              </div>
+              <button type="button" class="map-reset" id="map-reset">Ver todo Chile <span aria-hidden="true">↗</span></button>
+            </div>
             <div class="map-directory" aria-label="Listado filtrado de cuerpos de agua">
               <div class="map-directory-head">
-                <span class="map-directory-title">Listado en esta vista</span>
+                <span class="map-directory-title">Cuerpos de agua</span>
+                <span id="map-count" class="map-list-count" role="status">Cargando…</span>
               </div>
               <div id="map-list" class="map-list"></div>
             </div>
-          </div>
-          <aside class="map-panel" aria-label="Información del cuerpo de agua">
-            <div id="map-detail" class="map-detail" aria-live="polite">
-              <h3>Explora el territorio</h3><p>Selecciona un cuerpo de agua en el mapa o en el listado para conocer sus características.</p>
-            </div>
           </aside>
         </div>
-        <p class="map-caption">Las referencias territoriales no equivalen a estaciones de muestreo ni a evaluaciones de calidad del agua. Las delimitaciones se muestran únicamente cuando existe cartografía respaldada.</p>
       </div>
     </section>
 

@@ -1,54 +1,29 @@
-# Global Water Watch Chile — sitio público
+# Global Water Watch Chile · Sitio público
 
-Sitio estático institucional de Global Water Watch Chile, coordinado por Fundación Manzana Verde. Se publica mediante GitHub Pages.
+Sitio estático institucional, con HTML, CSS y JavaScript. Compatible con GitHub Pages y Cloudflare Pages.
 
 ## Estructura
+- `index.html`: estructura semántica y navegación.
+- `styles.css`: estilos adaptables a escritorio y móvil.
+- `js/site.js`: interacción de métodos y audiovisuales; logos autorizados.
+- `js/map.js`: visor Leaflet, filtros y fichas.
+- `data/cuerpos-agua.geojson`: datos territoriales aprobados para exposición pública.
+- `data/logos-red.json`: agrupaciones autorizadas para aparecer con su logo.
+- `data/videos.json`: videos y portadas.
+- `assets/`: fotografías institucionales y marcas.
+- `docs/`: instrucciones de instalación y arquitectura.
 
-```text
-index.html                Estructura semántica del sitio
-styles.css                Única hoja de estilos
-js/site.js                Menú, métodos, videos y logos
-js/map.js                 Mapa público (Leaflet, OpenStreetMap, GeoJSON)
-data/cuerpos-agua.geojson Referencias territoriales públicas
-data/videos.json         Videos incorporados en «Qué hacemos»
-data/logos-red.json      Logos de organizaciones autorizadas
-assets/                   Fotografías e identidad gráfica utilizadas
-tools/                    Importación y validación de geometrías
-docs/                     Guía técnica y política de publicación
-tests/                    Pruebas de integridad del sitio
-```
+## Publicación
+1. Respaldar el repositorio. Copiar el **contenido** de esta carpeta a la raíz del proyecto GitHub Pages (`index.html` debe quedar allí).
+2. Commit y Push; comprobar en escritorio y móvil. Recargar con `Ctrl+Shift+R` si hay CSS en caché.
+3. No copiar en el repositorio público la plataforma interna ni sus archivos privados.
 
-## Puesta en marcha
+## Datos del mapa
+Los cuerpos de agua mostrados constituyen referencias territoriales. Los sitios de muestreo, la posición exacta de las estaciones, las evidencias documentales, los voluntarios y las mediciones no se publican por defecto. La aprobación de una agrupación y la validación de GWW Chile son independientes.
 
-El sitio utiliza archivos JSON, por lo que debe abrirse mediante un servidor HTTP (no haciendo doble clic en `index.html`).
+## Limitaciones
+Se requieren delimitaciones cartográficas oficiales para representar humedales mediante Polygon/MultiPolygon; los puntos generales no constituyen sus límites. Los valores históricos de la red deben contrastarse con la memoria correspondiente antes de uso institucional final.
 
-```bash
-python -m http.server 8000
-```
+## Guía técnica de despliegue y integración
 
-Abrir `http://localhost:8000/` y comprobar los enlaces, el mapa y la reproducción de videos. Se requiere conexión para cargar Leaflet, teselas de OpenStreetMap y contenido YouTube.
-
-Publicar **el contenido de esta carpeta** en la raíz de la rama configurada en GitHub Pages. No subir la carpeta que lo contiene como subdirectorio.
-
-## Modelo de datos
-
-`data/cuerpos-agua.geojson` contiene referencias territoriales documentadas. **No identifica estaciones, organizaciones, personas ni resultados de monitoreo.** Los puntos son localizaciones generales y no implican delimitaciones. Los polígonos solo se muestran cuando su geometría contiene fuente y fecha.
-
-```bash
-python tools/validar_catalogo.py
-```
-
-Consultar `docs/MAPA_Y_POLIGONOS.md` antes de importar una nueva delimitación y `docs/DEPURACION.md` antes de reemplazar versiones antiguas del repositorio.
-
-## Gobierno de datos
-
-Todo lo que se incorpore a este repositorio público, incluso en JSON, `assets/` o `docs/`, puede ser descargado por terceros. Los registros de la plataforma interna se mantendrán en un sistema separado con autenticación, autorización y exportación controlada hacia la web pública.
-
-## Comprobación rápida
-
-```bash
-python tools/validar_catalogo.py
-python -m unittest discover -s tests -v
-```
-
-La guía de diagnóstico y mantenimiento está en `docs/MAPA_PUBLICO.md`.
+Ver `docs/INSTALACION_Y_ARQUITECTURA.md` para instrucciones de publicación, paleta, mapa, límites de datos y las opciones para alojar la aplicación interna.
