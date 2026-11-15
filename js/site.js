@@ -19,35 +19,6 @@
     }));
   }
 
-  const methods = [...document.querySelectorAll('.method')];
-  function closeMethods(returnFocus = false) {
-    let last = null;
-    for (const item of methods) {
-      const button = item.querySelector('.method-trigger');
-      const detail = item.querySelector('.method-popover');
-      if (button.getAttribute('aria-expanded') === 'true') last = button;
-      button.setAttribute('aria-expanded', 'false');
-      detail.hidden = true;
-    }
-    if (returnFocus && last) last.focus();
-  }
-  for (const item of methods) {
-    const trigger = item.querySelector('.method-trigger');
-    const detail = item.querySelector('.method-popover');
-    trigger.addEventListener('click', () => {
-      const willOpen = trigger.getAttribute('aria-expanded') !== 'true';
-      closeMethods();
-      trigger.setAttribute('aria-expanded', String(willOpen));
-      detail.hidden = !willOpen;
-    });
-  }
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeMethods(true);
-  });
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.method')) closeMethods();
-  });
-
   async function loadJson(path) {
     const response = await fetch(path);
     if (!response.ok) throw new Error(`No se pudo leer ${path}: ${response.status}`);

@@ -17,13 +17,15 @@
     type: document.getElementById('map-type'),
     reset: document.getElementById('map-reset'),
     detail: document.getElementById('map-detail'),
-    list: document.getElementById('map-list')
+    list: document.getElementById('map-list'),
+    toggle: document.getElementById('map-explore-toggle'),
+    sidebar: document.getElementById('map-sidebar'),
+    closeSidebar: document.getElementById('map-sidebar-close')
   };
 
-  const baseView = {center: [-36.91, -73.03], zoom: 9};
-  const nationalView = {center: [-37.3, -71.6], zoom: 4};
-  const defaultRegion = 'Biobío';
-  const defaultFeatureId = 'humedal-los-boldos';
+  // Vista geográfica aproximada del Chile continental, de Arica a Cabo de Hornos.
+  // fitBounds ajusta el acercamiento al tamaño real de la ventana, sin privilegiar Biobío.
+  const nationalBounds = [[-56.4, -76.5], [-17.3, -66.0]];
   const colors = {point: '#2484BF', fill: '#68A5DD', boundary: '#66824F'};
   const permittedGeometries = new Set(['Point', 'LineString', 'MultiLineString', 'Polygon', 'MultiPolygon']);
 
@@ -205,10 +207,6 @@
     }
     text(elements.count, `${visible.length} cuerpos de agua en esta vista`);
     if (currentFeatureId && !visible.some(feature => feature.id === currentFeatureId)) resetDetail();
-    if (!currentFeatureId && visible.length) {
-      const preferred = visible.find(feature => feature.id === defaultFeatureId) || visible.find(feature => feature.geometry) || visible[0];
-      showDetail(preferred);
-    }
     refreshList();
   }
 
@@ -218,7 +216,8 @@
       return;
     }
     try {
-      map = L.map(root, {scrollWheelZoom: true, wheelDebounceTime: 70, wheelPxPerZoomLevel: 100, zoomControl: true}).setView(baseView.center, baseView.zoom);
+      map = L.map(root, {scrollWheelZoom: false, wheelDebounceTime: 70, wheelPxPerZoomLevel: 100, zoomControl: true});
+      map.fitBounds(nationalBounds, {padding: [27, 27], maxZoom: 5, animate: false});
       L.DomEvent.disableScrollPropagation(elements.detail);
       L.DomEvent.disableClickPropagation(elements.detail);
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -234,6 +233,21 @@
       status('No se pudo inicializar el mapa. Consulta la consola del navegador.');
     }
   }
+
+  function setSidebar(open, returnFocus = false) {
+    if (!elements.sidebar || !elements.toggle) return;
+    elements.sidebar.hidden = !open;
+    elements.toggle.setAttribute('aria-expanded', String(open));
+    elements.toggle.setAttribute('aria-label', open ? 'Cerrar explorador de cuerpos de agua' : 'Abrir explorador de cuerpos de agua');
+    if (open) elements.search?.focus();
+    else if (returnFocus) elements.toggle.focus();
+  }
+
+  elements.toggle?.addEventListener('click', () => setSidebar(elements.sidebar.hidden));
+  elements.closeSidebar?.addEventListener('click', () => setSidebar(false, true));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && elements.sidebar && !elements.sidebar.hidden) setSidebar(false, true);
+  });
 
   async function start() {
     try {
@@ -255,10 +269,9 @@
         elements.type.value = '';
         resetDetail();
         redraw();
-        if (map) map.setView(nationalView.center, nationalView.zoom);
+        if (map) map.fitBounds(nationalBounds, {padding: [27, 27], maxZoom: 5, animate: true});
       });
       initializeMap();
-      if ([...elements.region.options].some(option => option.value === defaultRegion)) elements.region.value = defaultRegion;
       redraw();
       if (!features.length) status('No hay cuerpos de agua públicos disponibles en el catálogo.');
     } catch (error) {
