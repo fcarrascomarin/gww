@@ -196,8 +196,8 @@
             icon: L.divIcon({
               className: 'gww-marker-wrap',
               html: '<div class="gww-marker"><span>GWW</span></div>',
-              iconSize: [40, 40],
-              iconAnchor: [14, 34],
+              iconSize: [44, 44],
+              iconAnchor: [15, 37],
               popupAnchor: [0, -30]
             })
           }),
@@ -222,7 +222,7 @@
       return;
     }
     try {
-      map = L.map(root, {scrollWheelZoom: false, wheelDebounceTime: 70, wheelPxPerZoomLevel: 100, zoomControl: true});
+      map = L.map(root, {scrollWheelZoom: true, wheelDebounceTime: 55, wheelPxPerZoomLevel: 90, zoomControl: true});
       map.fitBounds(nationalBounds, {padding: [27, 27], maxZoom: 5, animate: false});
       L.DomEvent.disableScrollPropagation(elements.detail);
       L.DomEvent.disableClickPropagation(elements.detail);
