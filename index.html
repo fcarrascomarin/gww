@@ -7,12 +7,15 @@
   <meta name="theme-color" content="#0c3a43">
   <title>Global Water Watch Chile · Conocer para cuidar</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=gww-institucional-20261114b">
+  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="js/site.js?v=gww-institucional-20261114b" defer></script>
-  <script src="js/map.js?v=gww-institucional-20261114b" defer></script>
+  <script src="js/site.js?v=gww-publica-20261115" defer></script>
+  <script src="js/map.js?v=gww-publica-20261115" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -38,46 +41,15 @@
         <div class="hero-message">
           <p class="hero-kicker">Global Water Watch Chile</p>
           <h1 id="hero-title">Conocer para <em>cuidar</em></h1>
-          <p>Monitoreo comunitario y conocimiento compartido para cuidar las aguas dulces de Chile.</p>
-          <a class="pill-link" href="#mapa">Explorar el mapa <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="methods" aria-label="Explora los tres métodos de monitoreo">
-          <div class="method" data-method="fisicoquimico">
-            <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-fisicoquimico" aria-label="Conocer el monitoreo fisicoquímico">
-              <span class="method-visual"><img src="assets/metodo-tubo-azul.png" alt="" width="128" height="200"><span class="method-symbol" aria-hidden="true">+</span></span>
-              <span class="method-title">Fisicoquímico </span>
-            </button>
-            <div id="detail-fisicoquimico" class="method-popover" hidden>
-              <strong>Fisicoquímico</strong>
-              <p>Observa pH, temperatura, turbidez, oxígeno disuelto, alcalinidad y dureza del agua mediante instrumentos de campo.</p>
-            </div>
+          <p>Comunidades que observan, aprenden y comparten conocimientos para cuidar las aguas dulces de Chile.</p>
+          <div class="hero-actions">
+            <a class="pill-link" href="#mapa">Explorar el mapa <span aria-hidden="true">↗</span></a>
+            <a class="pill-link pill-link-secondary" href="#contacto">Cómo sumarse <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="method" data-method="bacteriologico">
-            <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-bacteriologico" aria-label="Conocer el monitoreo bacteriológico">
-              <span class="method-visual"><img src="assets/metodo-tarjeta-rcard.png" alt="" width="154" height="195"><span class="method-symbol" aria-hidden="true">+</span></span>
-              <span class="method-title">Bacteriológico </span>
-            </button>
-            <div id="detail-bacteriologico" class="method-popover" hidden>
-              <strong>Bacteriológico</strong>
-              <p>Utiliza tarjetas de cultivo R-CARD para observar bacterias indicadoras, siguiendo protocolos de incubación y lectura.</p>
-            </div>
-          </div>
-          <div class="method" data-method="macroinvertebrados">
-            <button type="button" class="method-trigger" aria-expanded="false" aria-controls="detail-macroinvertebrados" aria-label="Conocer el biomonitoreo de macroinvertebrados">
-              <span class="method-visual"><img src="assets/metodo-lupa-insecto.png" alt="" width="154" height="195"><span class="method-symbol" aria-hidden="true">+</span></span>
-              <span class="method-title">Macroinvertebrados </span>
-            </button>
-            <div id="detail-macroinvertebrados" class="method-popover" hidden>
-              <strong>Macroinvertebrados</strong>
-              <p>Identifica organismos acuáticos y su sensibilidad a cambios del entorno para interpretar condiciones ecológicas.</p>
-            </div>
-          </div>
-          
         </div>
       </div>
     </section>
 
-            
     <section class="identity section" id="quienes" aria-labelledby="identity-heading">
       <div class="container">
       <div class="identity-story">
@@ -108,25 +80,60 @@
 
     <section class="science section" id="ciencia" aria-labelledby="science-heading">
       <div class="container">
-        <div class="section-head"><span class="eyebrow">Ciencia y territorio</span>
+        <div class="section-head">
+          <span class="eyebrow">Ciencia comunitaria en acción</span>
           <h2 id="science-heading">Qué hacemos</h2>
-          <p>Observamos el agua, compartimos conocimientos y fortalecemos el trabajo comunitario.</p>
+          <p>Fortalecemos la capacidad de las comunidades para conocer sus cuerpos de agua, generar información y compartir lo aprendido.</p>
         </div>
-        
-        <div class="video-grid" id="video-grid" aria-label="Experiencias audiovisuales"></div>
+        <div class="science-intro">
+          <p>Global Water Watch Chile surge de una necesidad concreta: en 2019, una comunidad de Antihuala buscó herramientas para conocer de manera autónoma la salud ecológica de su laguna. Esa inquietud impulsó a Fundación Manzana Verde a explorar metodologías de monitoreo comunitario. Desde 2022, la Fundación desarrolla en Chile el programa Global Water Watch, vinculado a la Universidad de Auburn.</p>
+          <p>Hoy el trabajo combina formación práctica, certificaciones, acompañamiento a equipos locales y encuentros para intercambiar experiencias. Las monitoras y los monitores aprenden a observar sus ríos, lagos, lagunas y humedales con procedimientos compartidos, interpretar sus registros y conversar sobre el cuidado del agua desde sus propios territorios.</p>
+        </div>
+        <div class="science-process" aria-label="Cómo trabajamos con los equipos comunitarios">
+          <article class="process-step"><span class="process-number">01</span><h3>Nos encontramos</h3><p>Escuchamos las inquietudes de cada territorio y reconocemos los cuerpos de agua que sus comunidades quieren conocer.</p></article>
+          <article class="process-step"><span class="process-number">02</span><h3>Aprendemos en terreno</h3><p>Compartimos formación, metodologías y prácticas de medición para fortalecer equipos locales autónomos.</p></article>
+          <article class="process-step"><span class="process-number">03</span><h3>Compartimos lo observado</h3><p>Los datos y las experiencias ayudan a seguir cambios en el tiempo, dialogar y orientar acciones de cuidado comunitario.</p></article>
+        </div>
+        <div class="science-subhead">
+          <span class="eyebrow">Encuentros y experiencias</span>
+          <h3>El trabajo ocurre en comunidad</h3>
+          <p>Conoce algunos registros audiovisuales de los procesos de aprendizaje y observación en el territorio.</p>
+        </div>
+        <div class="video-grid" id="video-grid" aria-label="Experiencias audiovisuales de GWW Chile"></div>
+
+        <div class="monitoring" aria-labelledby="monitoring-heading">
+          <div class="monitoring-intro">
+            <span class="eyebrow">¿Cómo se monitorea el agua?</span>
+            <h3 id="monitoring-heading">Tres formas de observar, una mirada compartida</h3>
+            <p>El monitoreo comunitario consiste en realizar observaciones periódicas y registrar resultados con técnicas estandarizadas. GWW enseña tres métodos complementarios: permiten conocer características del agua, identificar indicadores bacteriológicos y observar organismos que reflejan condiciones del ecosistema. Un registro aislado no equivale por sí solo a un diagnóstico integral.</p>
+          </div>
+          <div class="methods" aria-label="Tres métodos de monitoreo de Global Water Watch Chile">
+            <article class="method">
+              <div class="method-visual method-visual--fisico"><img src="assets/metodo-tubo-azul.png" alt="Tubo de ensayo usado para observar parámetros del agua" loading="lazy"></div>
+              <div class="method-content"><span class="method-label">01 · Características del agua</span><h4>Fisicoquímico</h4><p>Mide temperatura, turbidez, pH, oxígeno disuelto, alcalinidad y dureza total. Ayuda a describir condiciones del agua y sus variaciones.</p></div>
+            </article>
+            <article class="method">
+              <div class="method-visual method-visual--bacterio"><img src="assets/metodo-tarjeta-rcard.png" alt="Tarjeta de cultivo para análisis bacteriológico" loading="lazy"></div>
+              <div class="method-content"><span class="method-label">02 · Indicadores microbiológicos</span><h4>Bacteriológico</h4><p>Utiliza tarjetas de cultivo para identificar y contar colonias de bacterias indicadoras, entre ellas <i>E. coli</i>, siguiendo un protocolo de incubación y lectura.</p></div>
+            </article>
+            <article class="method">
+              <div class="method-visual method-visual--macro"><img src="assets/metodo-lupa-insecto.png" alt="Lupa con un macroinvertebrado acuático" loading="lazy"></div>
+              <div class="method-content"><span class="method-label">03 · Vida acuática</span><h4>Macroinvertebrados</h4><p>Reconoce pequeños organismos que viven en el agua y su sensibilidad a las alteraciones del entorno para interpretar la salud ecológica del lugar.</p></div>
+            </article>
+          </div>
+        </div>
       </div>
-      <div class="stats" aria-label="Cifras históricas de 2024">
-          <div><strong>285</strong><span>Monitoras y monitores formados</span></div>
-          <div><strong>15</strong><span>Jornadas de certificación</span></div>
-          <div><strong>+500</strong><span>Monitoreos reportados</span></div>
-          <p>Memoria institucional 2024</p>
-        </div>
+      <div class="stats" aria-label="Cifras del programa al cierre de 2024">
+        <div><strong>285</strong><span>Monitoras y monitores certificados</span></div>
+        <div><strong>15</strong><span>Jornadas de certificación realizadas</span></div>
+        <div><strong>106</strong><span>Organizaciones certificadas</span></div>
+        <p>Datos históricos de la <em>Memoria Global Water Watch Chile 2024</em>. No representan cifras actualizadas a 2026.</p>
       </div>
     </section>
 
     <section class="map-section section" id="mapa" aria-labelledby="map-heading">
       <div class="container-wide">
-        <div class="section-head"><span class="eyebrow">Cartografía colaborativa</span><h2 id="map-heading">Mapa del agua</h2><p>Explora cuerpos de agua y sus antecedentes territoriales.</p></div>
+        <div class="section-head"><span class="eyebrow">Cartografía colaborativa</span><h2 id="map-heading">Mapa del agua</h2><p>Recorre Chile y selecciona un cuerpo de agua, o abre el explorador para buscar y filtrar.</p></div>
         <div class="map-shell">
           <div class="map-main">
             <div id="water-map" class="water-map" role="region" aria-label="Mapa interactivo de cuerpos de agua de Chile" tabindex="0">
@@ -134,7 +141,9 @@
               <article id="map-detail" class="map-detail" aria-label="Caracterización del cuerpo de agua" aria-live="polite" hidden></article>
             </div>
           </div>
-          <aside class="map-sidebar" aria-label="Buscar y seleccionar cuerpos de agua">
+          <button type="button" class="map-explore-toggle" id="map-explore-toggle" aria-controls="map-sidebar" aria-expanded="false"><span class="filter-glyph" aria-hidden="true">☷</span> Explorar y filtrar</button>
+          <aside class="map-sidebar" id="map-sidebar" aria-label="Buscar y seleccionar cuerpos de agua" hidden>
+            <button type="button" class="map-sidebar-close" id="map-sidebar-close" aria-label="Cerrar explorador de cuerpos de agua">×</button>
             <div class="map-sidebar-intro">
               <span class="eyebrow">Explora el territorio</span>
               <h3>Encuentra un cuerpo de agua</h3>
