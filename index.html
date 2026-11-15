@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115b">
+  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115c">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="js/site.js?v=gww-publica-20261115b" defer></script>
-  <script src="js/map.js?v=gww-publica-20261115b" defer></script>
+  <script src="js/site.js?v=gww-publica-20261115c" defer></script>
+  <script src="js/map.js?v=gww-publica-20261115c" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -65,9 +65,23 @@
           <div class="identity-copy">
             <span class="identity-overline">Red nacional</span>
             <p class="identity-statement">Conocimiento local y metodología compartida para <em>cuidar</em> el agua.</p>
-            <p>Global Water Watch Chile es la implementación nacional del programa internacional <em>Global Water Watch</em>, desarrollada por Fundación Manzana Verde desde 2022 en vínculo con la Universidad de Auburn. Reúne organizaciones y personas que observan ríos, lagunas, lagos y humedales con herramientas de ciencia comunitaria.</p>
-            <p>Su origen en Chile se remonta a 2019, cuando la comunidad de Antihuala buscó un modo autónomo de conocer la salud ecológica de su laguna. Esa necesidad impulsó una búsqueda metodológica, el contacto con Global Water Watch en México y, más tarde, la conformación de la red chilena.</p>
-            <p>Hoy la red conecta organizaciones socioambientales, pueblos originarios, establecimientos educacionales, municipios, instituciones públicas y espacios académicos que generan conocimiento desde sus propios territorios para comprender mejor sus cuerpos de agua y fortalecer su cuidado.</p>
+            <p class="identity-lead">Global Water Watch Chile implementa en el país una red de ciencia comunitaria para observar ríos, lagunas, lagos y humedales con herramientas compartidas y mirada territorial.</p>
+            <div class="identity-notes">
+              <div class="identity-note"><strong>Coordinación</strong><span>Fundación Manzana Verde, en vínculo con Global Water Watch Internacional y la Universidad de Auburn.</span></div>
+              <div class="identity-note"><strong>Propósito</strong><span>Generar conocimiento local útil para comprender, cuidar y proyectar mejores decisiones sobre el agua.</span></div>
+            </div>
+            <details class="expandable">
+              <summary>Ver más sobre el origen en Chile</summary>
+              <div class="expandable-content">
+                <p>El proceso comenzó en 2019, cuando la comunidad de Antihuala buscó una forma autónoma de conocer la salud ecológica de su laguna. Esa necesidad impulsó una búsqueda metodológica, el contacto con Global Water Watch en México y, posteriormente, la consolidación de la red chilena, que Fundación Manzana Verde coordina desde 2022.</p>
+              </div>
+            </details>
+            <details class="expandable">
+              <summary>Ver más sobre quiénes integran la red</summary>
+              <div class="expandable-content">
+                <p>La red articula organizaciones socioambientales, pueblos originarios, establecimientos educacionales, municipios, instituciones públicas y espacios académicos que generan conocimiento desde sus propios territorios y comparten aprendizajes para fortalecer el cuidado de las aguas dulces.</p>
+              </div>
+            </details>
             <p class="identity-signature">Coordinación nacional · Fundación Manzana Verde</p>
           </div>
         </div>
@@ -93,7 +107,13 @@
           <p>Fortalecemos la capacidad de las comunidades para conocer sus cuerpos de agua, generar información y compartir lo aprendido.</p>
         </div>
         <div class="science-intro science-intro--single">
-          <p>El trabajo de GWW Chile combina formación práctica, certificaciones, acompañamiento a equipos locales y espacios de encuentro para compartir aprendizajes. Las monitoras y los monitores aprenden a observar sus ríos, lagos, lagunas y humedales, registrar resultados y conversar sobre el cuidado del agua desde sus propias experiencias territoriales.</p>
+          <p>GWW Chile trabaja junto a comunidades y organizaciones para aprender en terreno, realizar monitoreos compartidos y construir información útil sobre los cuerpos de agua.</p>
+          <details class="expandable expandable--centered">
+            <summary>Ver más sobre cómo trabajamos</summary>
+            <div class="expandable-content">
+              <p>El proceso combina formación práctica, certificaciones, acompañamiento a equipos locales y encuentros para intercambiar aprendizajes. Las monitoras y los monitores aprenden a observar sus ríos, lagos, lagunas y humedales, registrar resultados y conversar sobre el cuidado del agua desde sus propias experiencias territoriales.</p>
+            </div>
+          </details>
         </div>
         <div class="science-process" aria-label="Cómo trabajamos con los equipos comunitarios">
           <article class="process-step"><span class="process-number">01</span><h3>Nos encontramos</h3><p>Escuchamos las inquietudes de cada territorio y reconocemos los cuerpos de agua que sus comunidades quieren conocer.</p></article>
@@ -142,6 +162,7 @@
         <div class="section-head"><span class="eyebrow">Cartografía colaborativa</span><h2 id="map-heading">Mapa del agua</h2><p>Recorre Chile y selecciona un cuerpo de agua, o abre el explorador para buscar y filtrar.</p></div>
         <div class="map-shell">
           <div class="map-main">
+            <div class="map-legend" aria-label="Simbología del mapa"><span class="map-legend-marker" aria-hidden="true"></span><span>Presencia territorial GWW</span></div>
             <div id="water-map" class="water-map" role="region" aria-label="Mapa interactivo de cuerpos de agua de Chile" tabindex="0">
               <p class="map-status" id="map-status" role="status">Cargando mapa…</p>
               <article id="map-detail" class="map-detail" aria-label="Caracterización del cuerpo de agua" aria-live="polite" hidden></article>

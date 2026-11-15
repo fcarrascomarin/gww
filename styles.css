@@ -337,3 +337,38 @@ button{cursor:pointer}
   .science-intro--single p{font-size:13px}
   .method--full-photo .method-visual{height:215px}
 }
+
+/* === Ajustes de jerarquía y lectura · ronda 3 === */
+.identity-copy{max-width:560px}
+.identity-statement{font-size:clamp(24px,3vw,36px)!important;line-height:1.14!important;margin-bottom:14px!important}
+.identity-lead{font-size:16px;line-height:1.8;color:#335861;margin-bottom:16px!important}
+.identity-notes{display:grid;gap:10px;margin:0 0 16px}
+.identity-note{display:grid;gap:5px;padding:14px 16px;border:1px solid #d9e6e1;border-radius:16px;background:rgba(255,255,255,.76)}
+.identity-note strong{font-family:var(--heading);font-size:13px;color:var(--deep)}
+.identity-note span{font-size:13px;line-height:1.65;color:#4e6c73}
+.expandable{margin:12px 0 0;border:1px solid #dce8e2;border-radius:16px;background:rgba(255,255,255,.78);overflow:hidden}
+.expandable summary{list-style:none;cursor:pointer;padding:14px 18px;font-weight:700;font-size:13px;color:var(--deep);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.expandable summary::-webkit-details-marker{display:none}
+.expandable summary::after{content:'+';font-size:18px;line-height:1;color:#4d7677;flex-shrink:0}
+.expandable[open] summary::after{content:'–'}
+.expandable-content{padding:0 18px 18px}
+.expandable-content p{font-size:13px;line-height:1.75;color:#4e6c73;margin:0}
+.expandable--centered{max-width:640px;margin:16px auto 0;text-align:left}
+.network-ribbon{margin-top:28px}
+.science-process{margin-top:6px}
+.map-legend{position:absolute;left:16px;bottom:16px;z-index:780;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid #d6e5de;box-shadow:0 6px 18px rgba(10,55,59,.12);font-size:12px;font-weight:700;color:var(--deep);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.map-legend-marker{position:relative;width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:linear-gradient(155deg,#54abe0 0%,#2d86c8 58%,#1768a9 100%);border:2px solid #fff;box-shadow:0 3px 8px rgba(9,56,68,.18)}
+.map-legend-marker::after{content:'GWW';position:absolute;inset:0;display:grid;place-items:center;transform:rotate(45deg);font-family:var(--heading);font-size:4.8px;font-weight:800;letter-spacing:.05em;color:#fff}
+.gww-marker{width:44px;height:44px}
+.gww-marker span{font-size:10px}
+
+@media (max-width: 980px){
+  .identity-lead{font-size:15px}
+}
+@media (max-width: 760px){
+  .identity-notes{gap:8px}
+  .identity-note{padding:12px 14px}
+  .expandable summary{padding:13px 15px;font-size:12.5px}
+  .expandable-content{padding:0 15px 15px}
+  .map-legend{left:10px;bottom:10px;font-size:11px;padding:8px 11px}
+}
