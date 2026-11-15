@@ -192,8 +192,14 @@
       if (located.length) {
         const layer = L.geoJSON({type: 'FeatureCollection', features: located}, {
           style: () => ({color: colors.boundary, weight: 2.5, fillColor: colors.fill, fillOpacity: 0.25}),
-          pointToLayer: (_feature, latlng) => L.circleMarker(latlng, {
-            radius: 7, color: '#fff', weight: 2, fillColor: colors.point, fillOpacity: 1
+          pointToLayer: (_feature, latlng) => L.marker(latlng, {
+            icon: L.divIcon({
+              className: 'gww-marker-wrap',
+              html: '<div class="gww-marker"><span>GWW</span></div>',
+              iconSize: [40, 40],
+              iconAnchor: [14, 34],
+              popupAnchor: [0, -30]
+            })
           }),
           onEachFeature: (feature, itemLayer) => {
             featureLayers.set(feature.id, itemLayer);
