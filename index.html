@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115e">
+  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115f">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="js/site.js?v=gww-publica-20261115e" defer></script>
-  <script src="js/map.js?v=gww-publica-20261115e" defer></script>
+  <script src="js/site.js?v=gww-publica-20261115f" defer></script>
+  <script src="js/map.js?v=gww-publica-20261115f" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -29,6 +29,7 @@
       <a href="#quienes">Quiénes somos</a>
       <a href="#ciencia">Qué hacemos</a>
       <a href="#mapa">Mapa del agua</a>
+      <a class="nav-internal" href="monitoreo-interno.html">Monitoreo interno</a>
       <a class="nav-contact" href="#contacto">Cómo sumarse</a>
     </nav>
   </header>
@@ -101,33 +102,38 @@
       <div class="container">
         <div class="section-head science-head">
           <span class="eyebrow">Ciencia comunitaria en acción</span>
-          <h2 id="science-heading">Qué hacemos</h2>
-          <p>Acompañamos procesos de ciencia comunitaria para aprender en terreno, monitorear el agua y compartir lo observado.</p>
+          <h2 id="science-heading">Cómo trabajamos en el territorio</h2>
+          <p>En GWW Chile acompañamos procesos de ciencia comunitaria para formar equipos locales, monitorear el agua y compartir lo aprendido.</p>
         </div>
-        <div class="science-subhead science-subhead--compact">
-          <span class="eyebrow">Encuentros y experiencias</span>
+        <ul class="science-flow" aria-label="Secuencia de trabajo de GWW Chile">
+          <li>Escuchamos las inquietudes de cada territorio.</li>
+          <li>Compartimos metodologías y aprendizaje práctico en terreno.</li>
+          <li>Transformamos lo observado en información útil para el cuidado comunitario.</li>
+        </ul>
+        <div class="science-subhead science-subhead--refined">
+          <span class="eyebrow">Experiencias en terreno</span>
           <h3>Formación, monitoreo y aprendizaje compartido</h3>
-          <p>Escuchamos las inquietudes de cada territorio, compartimos metodologías y transformamos lo observado en aprendizajes y acciones de cuidado comunitario.</p>
+          <p>Estos registros muestran parte del trabajo colaborativo de GWW Chile: capacitación, observación directa y construcción de conocimiento en comunidad.</p>
         </div>
         <div class="video-grid" id="video-grid" aria-label="Experiencias audiovisuales de GWW Chile"></div>
 
         <div class="monitoring" aria-labelledby="monitoring-heading">
-          <div class="monitoring-intro">
-            <span class="eyebrow">¿Cómo se monitorea el agua?</span>
-            <h3 id="monitoring-heading">Tres métodos de monitoreo</h3>
-            <p>Cada método aporta una mirada distinta sobre el agua y el ecosistema. Aquí verás una síntesis general; si quieres profundizar, puedes desplegar más información en cada tarjeta.</p>
+          <div class="monitoring-intro monitoring-intro--refined">
+            <span class="eyebrow">Métodos de monitoreo</span>
+            <h3 id="monitoring-heading">Tres formas complementarias de observar el agua</h3>
+            <p>Las comunidades aprenden tres métodos que se complementan entre sí: uno describe características del agua, otro analiza indicadores bacteriológicos mediante R-cards y el tercero observa macroinvertebrados acuáticos en el río.</p>
           </div>
           <div class="methods" aria-label="Tres métodos de monitoreo de Global Water Watch Chile">
             <article class="method method--full-photo">
-              <div class="method-visual method-visual--photo"><img src="assets/brochure-contacto.webp" alt="Monitor realizando observación de una muestra de agua con kit de análisis en terreno" loading="lazy"></div>
+              <div class="method-visual method-visual--photo"><img src="assets/metodo-fisico-pro.jpg" alt="Monitor realizando observación de una muestra de agua con kit fisicoquímico en terreno" loading="lazy"></div>
               <div class="method-content"><span class="method-label">01 · Características del agua</span><h4>Fisicoquímico</h4><p>Mide variables del agua como temperatura, turbidez, pH y oxígeno disuelto para describir sus condiciones y variaciones.</p><details class="expandable method-expandable"><summary>Ver más sobre este método</summary><div class="expandable-content"><p>Este método ayuda a conocer condiciones del agua mediante una toma de muestra, la lectura de parámetros y el registro de resultados en terreno.</p><ul class="method-steps"><li>Toma de muestra</li><li>Lectura de parámetros</li><li>Registro inmediato de resultados</li></ul></div></details></div>
             </article>
             <article class="method method--full-photo">
-              <div class="method-visual method-visual--photo"><img src="assets/brochure-educacion.webp" alt="Jornada formativa con materiales de monitoreo para el método bacteriológico" loading="lazy"></div>
+              <div class="method-visual method-visual--photo"><img src="assets/metodo-tarjeta-rcard.png" alt="Tarjeta R-card utilizada para el monitoreo bacteriológico del agua" loading="lazy"></div>
               <div class="method-content"><span class="method-label">02 · Indicadores microbiológicos</span><h4>Bacteriológico</h4><p>Utiliza tarjetas de cultivo para identificar bacterias indicadoras, entre ellas <i>E. coli</i>, siguiendo un protocolo controlado.</p><details class="expandable method-expandable"><summary>Ver más sobre este método</summary><div class="expandable-content"><p>Se toma una muestra de agua, se inocula en tarjetas de cultivo y luego se realiza la lectura tras el tiempo de incubación establecido.</p><ul class="method-steps"><li>Toma de muestra</li><li>Fijación en tarjeta de cultivo</li><li>Incubación y conteo de colonias</li></ul></div></details></div>
             </article>
             <article class="method method--full-photo">
-              <div class="method-visual method-visual--photo"><img src="assets/gww-p11-80.webp" alt="Monitores realizando pesca in situ de macroinvertebrados en un río" loading="lazy"></div>
+              <div class="method-visual method-visual--photo"><img src="assets/macro_try2.jpg" alt="Monitores recolectando macroinvertebrados en un río mediante pesca in situ" loading="lazy"></div>
               <div class="method-content"><span class="method-label">03 · Vida acuática</span><h4>Macroinvertebrados</h4><p>Observa organismos que viven en el agua y permite interpretar la salud ecológica del ecosistema según su sensibilidad ambiental.</p><details class="expandable method-expandable"><summary>Ver más sobre este método</summary><div class="expandable-content"><p>El proceso considera la recolección de organismos en terreno, su reconocimiento por grupos y el cálculo de un índice biótico local.</p><ul class="method-steps"><li>Pesca in situ de bajo impacto</li><li>Reconocimiento de grupos</li><li>Cálculo del índice biótico local</li></ul></div></details></div>
             </article>
           </div>
