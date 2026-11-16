@@ -785,3 +785,212 @@ button{cursor:pointer}
   .stats .stat-icon { width: 52px; min-width: 52px; height: 52px; flex-basis: 52px; margin-bottom: 10px; }
   .stats .stat-icon .material-symbols-outlined { font-size: 36px; }
 }
+
+/* ==============================================================
+   GWW Chile 2026 — barra de tres zonas basada en la referencia.
+   Mantiene la portada y las secciones originales del ZIP base (9).
+   ============================================================== */
+:root{--header-height:82px}
+.site-header{
+  position:sticky;top:0;z-index:2000;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;
+  min-height:var(--header-height);
+  padding:10px clamp(16px,3vw,48px);
+  gap:clamp(12px,1.9vw,26px);
+  background:rgba(247,250,247,.82);
+  border-bottom:1px solid rgba(215,231,224,.84);
+  box-shadow:0 7px 32px rgba(10,54,58,.045);
+  -webkit-backdrop-filter:blur(22px) saturate(145%);
+  backdrop-filter:blur(22px) saturate(145%);
+}
+.site-header .brand{
+  justify-self:start;
+  display:inline-flex;align-items:center;gap:10px;
+  width:max-content;min-width:0;
+}
+.site-header .brand img{width:47px;height:55px;object-fit:contain;flex-shrink:0}
+.site-header .brand strong{font-size:12px;letter-spacing:.085em;line-height:1.2;font-weight:800}
+.site-header .brand small{font-size:10.5px;line-height:1.2;margin-top:4px;color:#587177}
+.site-header .site-nav{
+  grid-column:2;grid-row:1;justify-self:center;
+  display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;
+  gap:2px;padding:5px;
+  border:1px solid rgba(232,239,234,.92);
+  border-radius:999px;
+  background:rgba(255,255,255,.72);
+  box-shadow:0 5px 17px rgba(10,50,53,.052);
+  white-space:nowrap;
+}
+.site-header .site-nav a{
+  min-height:39px;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:9px 13px;
+  border:0;border-radius:999px;
+  background:transparent;color:#425d64;
+  font:650 12px/1.1 var(--sans);
+  letter-spacing:-.005em;
+  transition:background .2s ease,color .2s ease,box-shadow .2s ease;
+  transform:none;
+}
+.site-header .site-nav a:hover{background:#e9f0ec;color:#103e48;transform:none}
+.site-header .site-nav a.is-active,
+.site-header .site-nav a[aria-current="page"]{
+  color:#fff;background:#17454d;
+  box-shadow:0 3px 10px rgba(23,69,77,.13);
+}
+.site-header .site-nav a.is-active:hover{background:#1d545f;color:#fff}
+.site-header .header-tools{
+  grid-column:3;grid-row:1;
+  justify-self:end;
+  display:flex;align-items:center;gap:9px;
+}
+.site-header .nav-internal{
+  display:inline-flex;align-items:center;justify-content:center;gap:16px;
+  min-height:46px;
+  padding:6px 7px 6px 16px;
+  border:1px solid rgba(17,64,73,.2);
+  border-radius:999px;
+  background:#123f49;color:#fff;
+  box-shadow:0 7px 20px rgba(7,50,58,.16);
+  font:720 12px/1.15 var(--sans);
+  white-space:nowrap;
+  transition:background .2s ease,transform .2s ease;
+}
+.site-header .nav-internal:hover{background:#1e5a66;transform:translateY(-1px)}
+.site-header .internal-arrow{
+  display:inline-grid;place-items:center;
+  flex:0 0 31px;width:31px;height:31px;
+  border-radius:50%;background:#f7faf6;color:#153f49;
+  font-size:17px;font-weight:650;line-height:1;
+}
+.site-header .internal-short{display:none}
+.site-header .menu-toggle{
+  display:none;position:relative;
+  width:42px;height:42px;padding:0;
+  border:1px solid #d8e5df;border-radius:50%;
+  background:rgba(255,255,255,.86);color:#1b4550;
+  box-shadow:0 3px 12px rgba(7,47,55,.06);
+}
+.site-header .menu-toggle-lines,
+.site-header .menu-toggle-lines::before,
+.site-header .menu-toggle-lines::after{
+  content:"";position:absolute;left:50%;width:17px;height:1.6px;
+  background:currentColor;border-radius:1px;transform:translateX(-50%);
+}
+.site-header .menu-toggle-lines{top:50%}
+.site-header .menu-toggle-lines::before{top:-5px}
+.site-header .menu-toggle-lines::after{top:5px}
+.site-header .menu-toggle[aria-expanded="true"] .menu-toggle-lines{background:transparent}
+.site-header .menu-toggle[aria-expanded="true"] .menu-toggle-lines::before{top:0;transform:translateX(-50%) rotate(45deg)}
+.site-header .menu-toggle[aria-expanded="true"] .menu-toggle-lines::after{top:0;transform:translateX(-50%) rotate(-45deg)}
+
+/* Títulos: una línea, sin cortes forzados ni desbordes horizontales. */
+.hero h1{
+  font-size:clamp(35px,5.4vw,77px);
+  line-height:1.08;
+  white-space:nowrap;
+  text-wrap:nowrap;
+  letter-spacing:-.055em;
+}
+.identity-summary h2{
+  font-size:clamp(30px,2.72vw,39px);
+  max-width:none;
+  margin-bottom:18px;
+  white-space:nowrap;
+  text-wrap:nowrap;
+  letter-spacing:-.047em;
+}
+.science .section-head.science-head-final{max-width:1050px}
+.science .section-head.science-head-final h2{
+  font-size:clamp(30px,3vw,44px);
+  margin:6px auto 12px;
+  white-space:nowrap;text-wrap:nowrap;
+  letter-spacing:-.047em;
+}
+.monitoring-intro--refined{max-width:880px}
+.monitoring-intro--refined h3{
+  font-size:clamp(26px,2.7vw,35px);
+  white-space:nowrap;text-wrap:nowrap;
+  letter-spacing:-.042em;
+}
+.map-section .section-head h2,
+.contact h2,
+.internal-access__inner h1{
+  font-size:clamp(30px,2.9vw,42px);
+  white-space:nowrap;text-wrap:nowrap;
+}
+.video-card h3,
+.method-content h4,
+.map-sidebar-intro h3{
+  white-space:nowrap;text-wrap:nowrap;
+}
+.video-card h3{font-size:clamp(15px,1.45vw,19px)}
+.method-content h4{font-size:clamp(17px,1.7vw,21px)}
+.map-sidebar-intro h3{font-size:clamp(16px,1.8vw,19px)}
+
+@media (max-width:1180px){
+  .site-header{gap:12px;padding-inline:20px}
+  .site-header .brand img{width:41px;height:49px}
+  .site-header .brand strong{font-size:11px;letter-spacing:.055em}
+  .site-header .brand small{font-size:10px}
+  .site-header .site-nav a{font-size:11px;padding:9px 10px}
+  .site-header .nav-internal{font-size:11px;gap:9px;padding-left:13px}
+}
+@media (max-width:970px){
+  :root{--header-height:74px}
+  .site-header{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;
+    min-height:var(--header-height);padding:9px 15px;
+  }
+  .site-header .brand{grid-column:1;grid-row:1}
+  .site-header .header-tools{grid-column:2;grid-row:1}
+  .site-header .menu-toggle{display:inline-block;margin:0;order:0;flex:none}
+  .site-header .nav-internal{order:1;min-height:42px;padding:5px 5px 5px 12px;font-size:11px}
+  .site-header .internal-arrow{width:29px;height:29px;flex-basis:29px;font-size:15px}
+  .site-header .site-nav{
+    display:none;grid-column:auto;grid-row:auto;
+    position:absolute;top:calc(100% + 8px);right:13px;left:auto;
+    z-index:2200;min-width:min(330px,calc(100vw - 26px));
+    padding:10px;gap:4px;
+    border:1px solid #dce9e2;border-radius:20px;
+    background:rgba(251,253,251,.97);
+    box-shadow:0 16px 35px rgba(9,56,68,.15);
+    -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    flex-direction:column;align-items:stretch;
+  }
+  .site-header .site-nav.is-open{display:flex}
+  .site-header .site-nav a{justify-content:flex-start;min-height:42px;padding:11px 14px;border-radius:12px;font-size:13px}
+}
+@media (max-width:600px){
+  .site-header{padding-inline:11px;gap:8px}
+  .site-header .brand{gap:6px}
+  .site-header .brand img{width:39px;height:43px}
+  .site-header .brand strong{font-size:10px;letter-spacing:.02em}
+  .site-header .brand small{font-size:8.5px;margin-top:3px}
+  .site-header .header-tools{gap:7px}
+  .site-header .internal-full{display:none}
+  .site-header .internal-short{display:inline}
+  .site-header .nav-internal{gap:7px;padding:5px 5px 5px 10px;font-size:10.5px}
+  .site-header .internal-arrow{width:27px;height:27px;flex-basis:27px}
+  .hero h1{font-size:clamp(31px,8.4vw,47px)}
+  .identity-summary h2{font-size:clamp(22px,6.1vw,31px)}
+  .science .section-head.science-head-final h2{font-size:clamp(23px,6.25vw,32px)}
+  .monitoring-intro--refined h3{font-size:clamp(22px,6.1vw,31px)}
+  .map-section .section-head h2,.contact h2{font-size:clamp(28px,7.5vw,37px)}
+  .internal-access__inner h1{font-size:clamp(25px,7vw,35px)}
+  .video-card h3{font-size:18px}
+  .method-content h4{font-size:19px}
+}
+@media (max-width:375px){
+  .site-header .brand small{display:none}
+  .site-header .brand strong{font-size:9.5px;max-width:108px}
+  .site-header .brand img{width:35px;height:39px}
+  .site-header .nav-internal{font-size:10px}
+  .site-header .internal-arrow{width:24px;height:24px;flex-basis:24px}
+  .hero h1{font-size:clamp(28px,8.2vw,36px)}
+  .identity-summary h2{font-size:clamp(20px,5.9vw,25px)}
+  .science .section-head.science-head-final h2{font-size:clamp(21px,6vw,26px)}
+  .monitoring-intro--refined h3{font-size:clamp(21px,6vw,26px)}
+}

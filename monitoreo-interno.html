@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115f">
+  <link rel="stylesheet" href="styles.css?v=gww-publica-20261116-navbar12">
+  <script src="js/site.js?v=gww-publica-20261116-navbar12" defer></script>
 </head>
 <body>
   <header class="site-header" id="inicio">
@@ -18,13 +19,22 @@
       <img src="assets/logo-gww-chile.png" alt="" width="68" height="70">
       <span><strong>GLOBAL WATER WATCH</strong><small>CHILE · Fundación Manzana Verde</small></span>
     </a>
-    <nav class="site-nav site-nav--simple" aria-label="Navegación principal">
+    <nav class="site-nav" id="site-nav" aria-label="Secciones de la web pública">
+      <a href="index.html#inicio">Inicio</a>
       <a href="index.html#quienes">Quiénes somos</a>
       <a href="index.html#ciencia">Qué hacemos</a>
       <a href="index.html#mapa">Mapa del agua</a>
-      <a class="nav-internal is-current" href="monitoreo-interno.html">Monitoreo interno</a>
-      <a class="nav-contact" href="index.html#contacto">Cómo sumarse</a>
+      <a href="index.html#contacto">Cómo sumarse</a>
     </nav>
+    <div class="header-tools">
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="menu-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <a class="nav-internal is-current" href="monitoreo-interno.html" aria-current="page" aria-label="Monitoreo interno">
+        <span class="internal-full">Monitoreo interno</span><span class="internal-short">Monitoreo</span>
+        <span class="internal-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
   </header>
 
   <main id="contenido">

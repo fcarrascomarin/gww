@@ -13,9 +13,9 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=gww-publica-20261116c">
+  <link rel="stylesheet" href="styles.css?v=gww-publica-20261116-navbar12">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="js/site.js?v=gww-publica-20261116c" defer></script>
+  <script src="js/site.js?v=gww-publica-20261116-navbar12" defer></script>
   <script src="js/map.js?v=gww-publica-20261116c" defer></script>
 </head>
 <body>
@@ -25,14 +25,22 @@
       <img src="assets/logo-gww-chile.png" alt="" width="68" height="70">
       <span><strong>GLOBAL WATER WATCH</strong><small>CHILE · Fundación Manzana Verde</small></span>
     </a>
-    <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">☰</button>
-    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+    <nav class="site-nav" id="site-nav" aria-label="Secciones de la web pública">
+      <a class="is-active" href="#inicio" aria-current="page">Inicio</a>
       <a href="#quienes">Quiénes somos</a>
       <a href="#ciencia">Qué hacemos</a>
       <a href="#mapa">Mapa del agua</a>
-      <a class="nav-internal" href="monitoreo-interno.html">Monitoreo interno</a>
-      <a class="nav-contact" href="#contacto">Cómo sumarse</a>
+      <a href="#contacto">Cómo sumarse</a>
     </nav>
+    <div class="header-tools">
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="menu-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <a class="nav-internal" href="monitoreo-interno.html" aria-label="Acceder a monitoreo interno">
+        <span class="internal-full">Monitoreo interno</span><span class="internal-short">Monitoreo</span>
+        <span class="internal-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
   </header>
   <main id="contenido">
     <section class="hero" aria-labelledby="hero-title">
@@ -61,7 +69,7 @@
           </figure>
           <div class="identity-summary">
             <span class="eyebrow">Global Water Watch Chile</span>
-            <h2 id="identity-heading">El agua se conoce en comunidad</h2>
+            <h2 id="identity-heading">El agua en comunidad</h2>
             <p class="identity-intro">Somos una red de personas y organizaciones que observan ríos, lagunas, lagos y humedales para comprenderlos y cuidarlos.</p>
             <p class="identity-keyfact"><span class="identity-keyfact-year">Desde 2022 en Chile</span><span class="identity-keyfact-sep" aria-hidden="true"></span>Coordina Fundación Manzana Verde</p>
             <div class="identity-details" aria-label="Conoce más sobre GWW Chile">
@@ -92,7 +100,7 @@
       <div class="container">
         <div class="section-head science-head-final">
           <span class="eyebrow">Ciencia comunitaria en acción</span>
-          <h2 id="science-heading">Aprender en terreno, monitorear y compartir</h2>
+          <h2 id="science-heading">Aprender y monitorear</h2>
           <p>GWW Chile acompaña procesos de formación y monitoreo comunitario para que las comunidades observen sus cuerpos de agua y compartan información útil para cuidarlos.</p>
         </div>
         <div class="video-grid" id="video-grid" aria-label="Experiencias audiovisuales de GWW Chile"></div>
@@ -105,7 +113,7 @@
         <div class="monitoring" aria-labelledby="monitoring-heading">
           <div class="monitoring-intro monitoring-intro--refined">
             <span class="eyebrow">Métodos de monitoreo</span>
-            <h3 id="monitoring-heading">Tres herramientas para observar el agua</h3>
+            <h3 id="monitoring-heading">Tres formas de observar</h3>
             <p>Se complementan entre sí: una describe características del agua, otra analiza indicadores bacteriológicos con R-cards y la tercera observa macroinvertebrados acuáticos.</p>
           </div>
           <div class="methods" aria-label="Tres métodos de monitoreo de Global Water Watch Chile">
@@ -147,7 +155,7 @@
             <button type="button" class="map-sidebar-close" id="map-sidebar-close" aria-label="Cerrar explorador de cuerpos de agua">×</button>
             <div class="map-sidebar-intro">
               <span class="eyebrow">Explora el territorio</span>
-              <h3>Encuentra un cuerpo de agua</h3>
+              <h3>Explora cuerpos de agua</h3>
               <p>Filtra por zona o selecciona un lugar para ver su caracterización sobre el mapa.</p>
             </div>
             <div class="map-filters">
