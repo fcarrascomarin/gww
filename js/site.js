@@ -84,6 +84,22 @@
     }
   }
 
+
+
+  function setupMethodToggles() {
+    const toggles = document.querySelectorAll('.method-toggle');
+    toggles.forEach(button => {
+      const targetId = button.getAttribute('aria-controls');
+      const panel = targetId ? document.getElementById(targetId) : null;
+      if (!panel) return;
+      button.addEventListener('click', () => {
+        const willOpen = button.getAttribute('aria-expanded') !== 'true';
+        button.setAttribute('aria-expanded', String(willOpen));
+        panel.hidden = !willOpen;
+      });
+    });
+  }
+
   async function loadOrganizationLogos() {
     const container = document.getElementById('organization-logos');
     if (!container) return;
@@ -109,6 +125,7 @@
     }
   }
 
+  setupMethodToggles();
   void loadVideos();
   void loadOrganizationLogos();
 })();
