@@ -132,7 +132,7 @@ button{cursor:pointer}
 .method-label{font-size:10px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#5d8974}
 .method-content h4{font-size:21px;letter-spacing:-.035em;line-height:1.22;color:var(--deep);margin:8px 0 12px}
 .method-content p{font-size:13px;line-height:1.7;color:#526b70}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1150px;margin:48px auto 0;padding:30px 24px 20px;border-radius:23px;background:#f2ebd5;border:1px solid #e7dfc6;text-align:center}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1150px;margin:48px auto 48px;padding:30px 24px 20px;border-radius:23px;background:#f2ebd5;border:1px solid #e7dfc6;text-align:center}
 .stats>div{padding:5px 18px;border-right:1px solid #d2cab6}
 .stats>div:nth-child(3){border-right:0}
 .stats strong{display:block;font:800 clamp(34px,4vw,54px)/1.08 var(--heading);letter-spacing:-.055em;color:#103e46}
