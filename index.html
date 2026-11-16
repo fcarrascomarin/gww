@@ -12,10 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115f">
+  <link rel="stylesheet" href="styles.css?v=gww-publica-20261115g">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  <script src="js/site.js?v=gww-publica-20261115f" defer></script>
-  <script src="js/map.js?v=gww-publica-20261115f" defer></script>
+  <script src="js/site.js?v=gww-publica-20261115g" defer></script>
+  <script src="js/map.js?v=gww-publica-20261115g" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -70,6 +70,16 @@
               <div class="identity-note"><strong>Coordinación</strong><span>Fundación Manzana Verde, en vínculo con Global Water Watch Internacional y la Universidad de Auburn.</span></div>
               <div class="identity-note"><strong>Propósito</strong><span>Generar conocimiento local útil para comprender, cuidar y proyectar mejores decisiones sobre el agua.</span></div>
             </div>
+            <div class="identity-highlights" aria-label="Aspectos destacados de la red">
+              <figure class="identity-spotlight">
+                <img src="assets/red-aerea.jpg" alt="Vista aérea de una jornada de monitoreo comunitario junto a un curso de agua" loading="lazy">
+                <figcaption>Encuentros, formación y monitoreo colaborativo en distintos territorios.</figcaption>
+              </figure>
+              <div class="identity-badges">
+                <div class="identity-badge"><strong>Desde 2022</strong><span>Implementación coordinada en Chile.</span></div>
+                <div class="identity-badge"><strong>Trabajo en red</strong><span>Comunidades, organizaciones e instituciones que comparten aprendizaje.</span></div>
+              </div>
+            </div>
             <details class="expandable">
               <summary>Ver más sobre el origen en Chile</summary>
               <div class="expandable-content">
@@ -100,28 +110,30 @@
 
     <section class="science section" id="ciencia" aria-labelledby="science-heading">
       <div class="container">
-        <div class="section-head science-head">
-          <span class="eyebrow">Ciencia comunitaria en acción</span>
-          <h2 id="science-heading">Cómo trabajamos en el territorio</h2>
-          <p>En GWW Chile acompañamos procesos de ciencia comunitaria para formar equipos locales, monitorear el agua y compartir lo aprendido.</p>
+        <div class="science-overview">
+          <div class="science-overview__copy">
+            <span class="eyebrow">Ciencia comunitaria en acción</span>
+            <h2 id="science-heading">Cómo trabajamos en el territorio</h2>
+            <p>En GWW Chile acompañamos procesos de ciencia comunitaria para formar equipos locales, monitorear el agua y compartir lo aprendido.</p>
+            <ul class="science-points" aria-label="Secuencia de trabajo de GWW Chile">
+              <li><strong>Escuchamos</strong><span>las inquietudes de cada territorio y sus cuerpos de agua.</span></li>
+              <li><strong>Aprendemos</strong><span>con metodologías compartidas y práctica en terreno.</span></li>
+              <li><strong>Compartimos</strong><span>información útil para el cuidado comunitario.</span></li>
+            </ul>
+          </div>
+          <figure class="science-overview__visual">
+            <img src="assets/brochure-que-es.webp" alt="Participantes de GWW Chile realizando observaciones en terreno junto a un curso de agua" loading="lazy">
+            <figcaption>Aprendizaje práctico en ríos, lagunas, lagos y humedales.</figcaption>
+          </figure>
         </div>
-        <ul class="science-flow" aria-label="Secuencia de trabajo de GWW Chile">
-          <li>Escuchamos las inquietudes de cada territorio.</li>
-          <li>Compartimos metodologías y aprendizaje práctico en terreno.</li>
-          <li>Transformamos lo observado en información útil para el cuidado comunitario.</li>
-        </ul>
-        <div class="science-subhead science-subhead--refined">
-          <span class="eyebrow">Experiencias en terreno</span>
-          <h3>Formación, monitoreo y aprendizaje compartido</h3>
-          <p>Estos registros muestran parte del trabajo colaborativo de GWW Chile: capacitación, observación directa y construcción de conocimiento en comunidad.</p>
-        </div>
+        <p class="science-bridge">Algunas jornadas de formación y monitoreo colaborativo de la red.</p>
         <div class="video-grid" id="video-grid" aria-label="Experiencias audiovisuales de GWW Chile"></div>
 
         <div class="monitoring" aria-labelledby="monitoring-heading">
           <div class="monitoring-intro monitoring-intro--refined">
             <span class="eyebrow">Métodos de monitoreo</span>
-            <h3 id="monitoring-heading">Tres formas complementarias de observar el agua</h3>
-            <p>Las comunidades aprenden tres métodos que se complementan entre sí: uno describe características del agua, otro analiza indicadores bacteriológicos mediante R-cards y el tercero observa macroinvertebrados acuáticos en el río.</p>
+            <h3 id="monitoring-heading">Tres métodos complementarios</h3>
+            <p>Cada método aporta una mirada distinta sobre el agua: el primero describe sus características, el segundo utiliza R-cards para analizar indicadores bacteriológicos y el tercero observa macroinvertebrados acuáticos en el río.</p>
           </div>
           <div class="methods" aria-label="Tres métodos de monitoreo de Global Water Watch Chile">
             <article class="method method--full-photo">
@@ -129,7 +141,7 @@
               <div class="method-content"><span class="method-label">01 · Características del agua</span><h4>Fisicoquímico</h4><p>Mide variables del agua como temperatura, turbidez, pH y oxígeno disuelto para describir sus condiciones y variaciones.</p><details class="expandable method-expandable"><summary>Ver más sobre este método</summary><div class="expandable-content"><p>Este método ayuda a conocer condiciones del agua mediante una toma de muestra, la lectura de parámetros y el registro de resultados en terreno.</p><ul class="method-steps"><li>Toma de muestra</li><li>Lectura de parámetros</li><li>Registro inmediato de resultados</li></ul></div></details></div>
             </article>
             <article class="method method--full-photo">
-              <div class="method-visual method-visual--photo"><img src="assets/metodo-tarjeta-rcard.png" alt="Tarjeta R-card utilizada para el monitoreo bacteriológico del agua" loading="lazy"></div>
+              <div class="method-visual method-visual--photo"><img src="assets/metodo-bacterio-composite.jpg" alt="Trabajo de monitoreo bacteriológico con una tarjeta R-card como herramienta principal" loading="lazy"></div>
               <div class="method-content"><span class="method-label">02 · Indicadores microbiológicos</span><h4>Bacteriológico</h4><p>Utiliza tarjetas de cultivo para identificar bacterias indicadoras, entre ellas <i>E. coli</i>, siguiendo un protocolo controlado.</p><details class="expandable method-expandable"><summary>Ver más sobre este método</summary><div class="expandable-content"><p>Se toma una muestra de agua, se inocula en tarjetas de cultivo y luego se realiza la lectura tras el tiempo de incubación establecido.</p><ul class="method-steps"><li>Toma de muestra</li><li>Fijación en tarjeta de cultivo</li><li>Incubación y conteo de colonias</li></ul></div></details></div>
             </article>
             <article class="method method--full-photo">

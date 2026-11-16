@@ -520,3 +520,54 @@ button{cursor:pointer}
   .internal-access__inner{padding-block:54px}
   .site-nav--simple{display:flex}
 }
+
+/* === Reajuste editorial y visual · ronda 7 === */
+.identity-story{align-items:center}
+.identity-copy{display:flex;flex-direction:column;gap:0}
+.identity-highlights{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:14px;margin:18px 0 16px;align-items:stretch}
+.identity-spotlight{position:relative;margin:0;border-radius:22px;overflow:hidden;min-height:218px;box-shadow:0 14px 32px rgba(12,58,67,.08)}
+.identity-spotlight img{width:100%;height:100%;object-fit:cover;display:block}
+.identity-spotlight figcaption{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);font-size:12.5px;line-height:1.55;color:#264d54}
+.identity-badges{display:grid;gap:12px}
+.identity-badge{padding:18px 16px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(248,252,249,.92));border:1px solid #d9e7e1;box-shadow:0 10px 24px rgba(12,58,67,.05)}
+.identity-badge strong{display:block;font-family:var(--heading);font-size:18px;line-height:1.1;color:var(--deep);margin-bottom:7px}
+.identity-badge span{font-size:13px;line-height:1.6;color:#4e6b71}
+
+.science-head,.science-flow,.science-subhead--refined{display:none!important}
+.science-overview{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,460px);gap:34px;align-items:center;margin-bottom:22px}
+.science-overview__copy .eyebrow{margin-bottom:12px}
+.science-overview__copy h2{font-size:clamp(34px,4vw,52px);line-height:1.05;letter-spacing:-.048em;margin:0 0 14px;color:var(--deep)}
+.science-overview__copy p{max-width:620px;font-size:16px;line-height:1.74;color:#4f6c72;margin:0 0 18px}
+.science-points{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.science-points li{display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:start;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.65);border:1px solid #dbe7e2}
+.science-points strong{font-family:var(--heading);font-size:15px;color:var(--deep)}
+.science-points span{font-size:13px;line-height:1.62;color:#4f6d73}
+.science-overview__visual{margin:0;position:relative;border-radius:30px;overflow:hidden;min-height:460px;box-shadow:0 24px 46px rgba(12,58,67,.10)}
+.science-overview__visual img{width:100%;height:100%;object-fit:cover;display:block}
+.science-overview__visual figcaption{position:absolute;left:18px;right:18px;bottom:18px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);font-size:13px;line-height:1.6;color:#2f565e}
+.science-bridge{max-width:720px;margin:0 auto 18px;text-align:center;font-size:13px;line-height:1.7;color:#688086}
+.video-grid{margin-bottom:12px}
+.monitoring{margin-top:54px}
+.monitoring-intro--refined{max-width:760px;margin:0 auto 22px;text-align:center}
+.monitoring-intro--refined h3{font-size:clamp(24px,3vw,34px);line-height:1.15;letter-spacing:-.04em;margin-top:7px;margin-bottom:10px}
+.monitoring-intro--refined p{font-size:14px;line-height:1.72;color:#526d72}
+.method:nth-child(2) .method-visual{padding:0;background:#e7eeea}
+.method:nth-child(2) .method-visual img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center center;filter:none}
+.method:nth-child(3) .method-visual img{object-position:center 54%}
+
+@media (max-width: 1100px){
+  .science-overview{grid-template-columns:1fr;gap:22px}
+  .science-overview__visual{min-height:330px;order:-1}
+}
+@media (max-width: 900px){
+  .identity-highlights{grid-template-columns:1fr}
+  .identity-spotlight{min-height:200px}
+}
+@media (max-width: 760px){
+  .science-overview__copy h2{font-size:clamp(30px,8vw,42px)}
+  .science-overview__copy p,.monitoring-intro--refined p{font-size:14px}
+  .science-points li{grid-template-columns:1fr;gap:6px}
+  .science-overview__visual{min-height:260px}
+  .identity-badge strong{font-size:17px}
+  .identity-spotlight figcaption,.science-overview__visual figcaption{font-size:12px}
+}
